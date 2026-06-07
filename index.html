@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atlas – Gestão e Tecnologia | Automação de Processos & Agentes de IA</title>
+  <title>Portfólio – Atlas | Casos de Sucesso e Projetos de Automação & IA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
@@ -94,15 +94,6 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 24px;
-    }
-
-    /* ── GLOW BLOB ── */
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(120px);
-      pointer-events: none;
-      z-index: 0;
     }
 
     /* ── NAV ── */
@@ -220,24 +211,6 @@
       color: var(--text);
     }
 
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--white);
-    }
-
     .nav-cta {
       background: var(--grad);
       color: var(--white) !important;
@@ -256,30 +229,13 @@
     /* ── HERO ── */
     .hero {
       position: relative;
-      min-height: 100vh;
+      min-height: 55vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 140px 24px 100px;
+      padding: 160px 24px 80px;
       overflow: hidden;
-    }
-
-    .hero .blob-1 {
-      width: 700px;
-      height: 700px;
-      background: radial-gradient(circle, rgba(41, 118, 166, 0.10) 0%, transparent 70%);
-      top: -100px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .hero .blob-2 {
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(30, 86, 122, 0.08) 0%, transparent 70%);
-      bottom: 0;
-      right: -100px;
     }
 
     .hero-badge {
@@ -308,1424 +264,17 @@
     }
 
     @keyframes pulse {
-
-      0%,
-      100% {
+      0%, 100% {
         opacity: 1;
         transform: scale(1);
       }
-
       50% {
         opacity: 0.4;
         transform: scale(1.5);
       }
     }
 
-    .hero h1 {
-      font-size: clamp(2.8rem, 6vw, 5.2rem);
-      font-weight: 800;
-      letter-spacing: -0.04em;
-      max-width: 900px;
-      margin: 0 auto 24px;
-      color: var(--text);
-    }
-
-    .hero h1 .grad {
-      background: var(--grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero p {
-      font-size: 1.15rem;
-      color: var(--muted);
-      max-width: 600px;
-      margin: 0 auto 40px;
-      line-height: 1.7;
-    }
-
-    .btn-group {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--grad);
-      color: var(--white);
-      padding: 16px 36px;
-      border-radius: 100px;
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 0 40px rgba(41, 118, 166, 0.3);
-    }
-
-    .btn-primary:hover {
-      opacity: 0.9;
-      transform: translateY(-2px);
-      box-shadow: 0 0 60px rgba(41, 118, 166, 0.45);
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: transparent;
-      color: var(--text);
-      padding: 15px 32px;
-      border-radius: 100px;
-      font-family: 'Manrope', sans-serif;
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      cursor: pointer;
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .btn-secondary:hover {
-      background: var(--surface);
-      border-color: rgba(255, 255, 255, 0.15);
-    }
-
-    .hero-grid {
-      margin-top: 80px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      overflow: hidden;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-stat {
-      background: var(--surface);
-      padding: 28px 24px;
-      text-align: center;
-      transition: background 0.2s;
-    }
-
-    .hero-stat:hover {
-      background: var(--surface2);
-    }
-
-    .hero-stat .num {
-      font-family: 'Manrope', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      background: var(--grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-stat .label {
-      font-size: 0.85rem;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-
-    /* ── SECTION COMMON ── */
-    section {
-      position: relative;
-    }
-
-    .section-label {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 14px;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-
-    .section-sub {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 560px;
-      line-height: 1.7;
-    }
-
-    /* ── WHY AUTOMATE ── */
-    .why {
-      padding: 120px 0;
-      overflow: hidden;
-      background: linear-gradient(180deg, #090A08 0%, #0d1225 50%, #090A08 100%);
-      border-top: 1px solid rgba(255, 255, 255, 0.03);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    }
-
-    .why .blob-y {
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(30, 86, 122, 0.08) 0%, transparent 70%);
-      top: 0;
-      right: -200px;
-    }
-
-    .why-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .why-cards {
-      display: grid;
-      gap: 16px;
-    }
-
-    .why-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-
-    .why-card:hover {
-      border-color: rgba(41, 118, 166, 0.2);
-      transform: translateX(4px);
-    }
-
-    .why-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: var(--grad);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .why-card h4 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 6px;
-    }
-
-    .why-card p {
-      font-size: 0.875rem;
-      color: var(--muted);
-    }
-
-    /* ── SEGMENTS ── */
-    .segments {
-      padding: 120px 0;
-      background: radial-gradient(ellipse at 50% 50%, rgba(41, 118, 166, 0.06) 0%, #090A08 80%);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    }
-
-    .segments-header {
-      text-align: center;
-      margin-bottom: 56px;
-    }
-
-    .segments-header .section-sub {
-      margin: 0 auto;
-    }
-
-    .seg-tabs {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
-
-    .seg-tab {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      padding: 10px 20px;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--muted);
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .seg-tab:hover,
-    .seg-tab.active {
-      background: rgba(41, 118, 166, 0.10);
-      border-color: rgba(41, 118, 166, 0.35);
-      color: var(--white);
-    }
-
-    .seg-tab.active {
-      box-shadow: 0 0 20px rgba(41, 118, 166, 0.2);
-    }
-
-    .seg-content {
-      display: none;
-      animation: fadeIn 0.35s ease;
-    }
-
-    .seg-content.active {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(8px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .seg-panel {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
-    }
-
-    .seg-panel h3 {
-      font-size: 1.3rem;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-
-    .seg-panel p {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 20px;
-    }
-
-    .seg-examples {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .seg-example {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 12px 16px;
-      font-size: 0.875rem;
-      color: var(--text);
-      transition: border-color 0.2s;
-    }
-
-    .seg-example:hover {
-      border-color: rgba(41, 118, 166, 0.2);
-    }
-
-    .seg-example .dot {
-      width: 8px;
-      height: 8px;
-      background: var(--grad);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .seg-img {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      min-height: 300px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .seg-img .big-icon {
-      font-size: 5rem;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 0 30px rgba(41, 118, 166, 0.3));
-    }
-
-    .seg-img p {
-      color: var(--muted);
-      font-size: 0.9rem;
-      max-width: 260px;
-    }
-
-    .seg-img::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 40%, rgba(30, 86, 122, 0.08) 0%, transparent 70%);
-    }
-
-    /* ── RESULTS ── */
-    .results {
-      padding: 120px 0;
-      background: linear-gradient(135deg, #070c1a 0%, #101c40 100%);
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      position: relative;
-      overflow: hidden;
-    }
-    .results::before {
-      content: '';
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(114, 162, 196, 0.08) 0%, transparent 70%);
-      top: 50%;
-      left: 20%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      filter: blur(100px);
-    }
-
-    .results-header {
-      text-align: center;
-      margin-bottom: 64px;
-    }
-
-    .results-header .section-sub {
-      margin: 0 auto;
-    }
-
-    .results-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      overflow: hidden;
-      margin-bottom: 48px;
-    }
-
-    .result-card {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 36px 24px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      border: 1px solid rgba(255, 255, 255, 0.04);
-    }
-
-    .result-card:hover {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(41, 118, 166, 0.3);
-      transform: translateY(-2px);
-    }
-
-    .result-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60%;
-      height: 2px;
-      background: var(--grad);
-      border-radius: 0 0 8px 8px;
-    }
-
-    .result-card .number {
-      font-family: 'Manrope', sans-serif;
-      font-size: 3rem;
-      font-weight: 800;
-      background: var(--grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-
-    .result-card .desc {
-      font-size: 0.875rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .result-card .source {
-      font-size: 0.72rem;
-      color: rgba(107, 122, 153, 0.6);
-      margin-top: 8px;
-      font-style: italic;
-    }
-
-    .results-quote {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--accent2);
-      border-radius: var(--radius);
-      padding: 28px 32px;
-      font-size: 1rem;
-      color: var(--muted);
-      line-height: 1.7;
-      position: relative;
-    }
-
-    .results-quote::before {
-      content: '"';
-      font-size: 4rem;
-      font-family: 'Manrope', sans-serif;
-      color: var(--accent2);
-      opacity: 0.3;
-      position: absolute;
-      top: 8px;
-      left: 20px;
-      line-height: 1;
-    }
-
-    /* ── OFFER ── */
-    .offer {
-      padding: 120px 0;
-      overflow: hidden;
-    }
-
-    .offer .blob-o {
-      width: 700px;
-      height: 700px;
-      background: radial-gradient(circle, rgba(41, 118, 166, 0.07) 0%, transparent 70%);
-      bottom: -100px;
-      left: -200px;
-    }
-
-    .offer-header {
-      text-align: center;
-      margin-bottom: 64px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .offer-header .section-sub {
-      margin: 0 auto;
-    }
-
-    .offer-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .offer-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
-      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .offer-card::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: var(--grad);
-      opacity: 0;
-      transition: opacity 0.3s;
-      z-index: 0;
-    }
-
-    .offer-card:hover {
-      border-color: rgba(41, 118, 166, 0.35);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(41, 118, 166, 0.10);
-    }
-
-    .offer-card:hover::after {
-      opacity: 0.04;
-    }
-
-    .offer-card>* {
-      position: relative;
-      z-index: 1;
-    }
-
-    .offer-number {
-      font-family: 'Manrope', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      margin-bottom: 14px;
-    }
-
-    .offer-card h3 {
-      font-size: 1.2rem;
-      color: var(--white);
-      margin-bottom: 12px;
-    }
-
-    .offer-card p {
-      font-size: 0.875rem;
-      color: var(--muted);
-      line-height: 1.65;
-    }
-
-    .offer-card .offer-icon {
-      font-size: 2rem;
-      margin-bottom: 18px;
-      display: block;
-    }
-
-    /* ── SERVICES ── */
-    .services {
-      padding: 120px 0;
-    }
-
-    .services-header {
-      text-align: center;
-      margin-bottom: 64px;
-    }
-
-    .services-header .section-sub {
-      margin: 0 auto;
-    }
-
-    .services-list {
-      display: grid;
-      gap: 2px;
-    }
-
-    .service-row {
-      display: grid;
-      grid-template-columns: 80px 1fr auto;
-      gap: 24px;
-      align-items: center;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 24px 32px;
-      cursor: pointer;
-      transition: all 0.2s;
-      margin-bottom: 12px;
-    }
-
-    .service-row:hover {
-      border-color: rgba(41, 118, 166, 0.2);
-      background: var(--surface2);
-      transform: scale(1.005);
-    }
-
-    .service-num {
-      font-family: 'Manrope', sans-serif;
-      font-size: 2rem;
-      font-weight: 800;
-      background: var(--grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      opacity: 0.5;
-    }
-
-    .service-info h3 {
-      font-size: 1.1rem;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-
-    .service-info p {
-      font-size: 0.875rem;
-      color: var(--muted);
-    }
-
-    .service-tags {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .tag {
-      background: rgba(41, 118, 166, 0.08);
-      border: 1px solid rgba(41, 118, 166, 0.2);
-      border-radius: 100px;
-      padding: 4px 12px;
-      font-size: 0.75rem;
-      color: var(--accent);
-      white-space: nowrap;
-    }
-
-    /* ── CTA SECTION ── */
-    .cta-strip {
-      padding: 100px 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, #101C40 0%, #1B2F6C 100%);
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .cta-strip::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 50% 50%, rgba(41, 118, 166, 0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .cta-strip h2 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      color: var(--white);
-      max-width: 700px;
-      margin: 0 auto 16px;
-      position: relative;
-    }
-
-    .cta-strip p {
-      color: var(--muted);
-      max-width: 500px;
-      margin: 0 auto 36px;
-      position: relative;
-    }
-
-    .cta-strip .btn-primary {
-      background: linear-gradient(90deg, #D97706 0%, #DC2626 100%);
-      box-shadow: 0 0 40px rgba(220, 38, 38, 0.3);
-      position: relative;
-      z-index: 2;
-    }
-    .cta-strip .btn-primary:hover {
-      box-shadow: 0 0 60px rgba(220, 38, 38, 0.5);
-    }
-
-    /* ── FORM ── */
-    .form-section {
-      padding: 120px 0;
-      background: linear-gradient(180deg, transparent, rgba(41, 118, 166, 0.04) 50%, transparent);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .form-section .blob-f {
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(114, 162, 196, 0.12) 0%, transparent 70%);
-      top: 50%;
-      left: 80%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      z-index: 0;
-      filter: blur(120px);
-    }
-
-    .form-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .form-info h2 {
-      font-size: 2.8rem;
-      font-weight: 800;
-      line-height: 1.15;
-      color: #0C1530;
-      margin-bottom: 16px;
-    }
-
-    .form-info p {
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--muted);
-      line-height: 1.7;
-      margin-bottom: 32px;
-    }
-
-    .form-perks {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .perk {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-size: 0.9rem;
-      color: var(--text);
-    }
-
-    .perk-check {
-      width: 28px;
-      height: 28px;
-      background: #31912E;
-      border: none;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 0.9rem;
-      font-weight: 900;
-      color: #ffffff;
-    }
-
-    .form-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 40px;
-    }
-
-    .form-card h3 {
-      font-size: 1.4rem;
-      color: #0C1530;
-      margin-bottom: 8px;
-    }
-
-    .form-card .sub {
-      font-size: 0.875rem;
-      color: var(--muted);
-      margin-bottom: 28px;
-    }
-
-    .field-group {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .field label {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--muted);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .field input,
-    .field select,
-    .field textarea {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 13px 16px;
-      color: #0C1530;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      width: 100%;
-      -webkit-appearance: none;
-    }
-
-    .field input::placeholder,
-    .field textarea::placeholder {
-      color: rgba(107, 122, 153, 0.5);
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      border-color: rgba(41, 118, 166, 0.3);
-      box-shadow: 0 0 0 3px rgba(41, 118, 166, 0.07);
-    }
-
-    .field select option {
-      background: var(--surface);
-    }
-
-    .field textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .form-submit {
-      margin-top: 24px;
-      width: 100%;
-      background: var(--grad);
-      color: var(--white);
-      border: none;
-      padding: 16px;
-      border-radius: 12px;
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 8px 30px rgba(41, 118, 166, 0.25);
-    }
-
-    .form-submit:hover {
-      opacity: 0.9;
-      transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(41, 118, 166, 0.4);
-    }
-
-    .form-note {
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-top: 14px;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 40px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .footer-left p {
-      font-size: 0.85rem;
-      color: #EBF5F6;
-      margin-top: 6px;
-    }
-
-    .footer-right {
-      display: flex;
-      gap: 24px;
-    }
-
-    .footer-right a {
-      font-size: 0.85rem;
-      color: #EBF5F6;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-right a:hover {
-      color: var(--white);
-    }
-
-    /* ── SCROLL REVEAL ── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── COMPONENTES DO TEMPLATE ── */
-    /* Hero Layout Grid */
-    .hero-main-img-wrap {
-      width: 100%;
-      max-width: 540px;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgba(9, 10, 8, 0.08);
-      border: 1px solid rgba(9, 10, 8, 0.06);
-    }
-    
-    .hero-main-img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    .hero-grid-split {
-      display: grid;
-      grid-template-columns: 1.1fr 1.3fr;
-      gap: 60px;
-      align-items: center;
-      width: 100%;
-      margin-top: 48px;
-      text-align: left;
-    }
-    
-    .expert-bio {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-      background: rgba(9, 10, 8, 0.03);
-      border: 1px solid rgba(9, 10, 8, 0.05);
-      padding: 24px;
-      border-radius: 20px;
-    }
-    
-    .expert-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    
-    .expert-info {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    
-    .expert-quote {
-      font-size: 0.9rem;
-      color: #374151;
-      line-height: 1.5;
-      font-style: italic;
-    }
-    
-    .expert-name {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .hero-scroll-indicator {
-      margin-top: 48px;
-    }
-
-    .scroll-down-btn {
-      padding: 12px 28px;
-      border-radius: 100px;
-      background: #299AA6;
-      color: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
-      box-shadow: 0 10px 25px rgba(12, 21, 48, 0.15);
-      animation: bounce 2s infinite;
-      transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
-    }
-
-    .scroll-down-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(41, 154, 166, 0.3);
-      background: #1E7A85;
-    }
-
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-8px); }
-      60% { transform: translateY(-4px); }
-    }
-
-    .grad-logo-wrap {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: var(--grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .grad-logo-svg {
-      display: inline-block;
-      width: 54px;
-      height: 54px;
-      color: var(--accent);
-      vertical-align: middle;
-      -webkit-text-fill-color: initial;
-      animation: spin-logo 20s linear infinite;
-    }
-
-    @keyframes spin-logo {
-      to { transform: rotate(360deg); }
-    }
-
-    /* Spec Box Container (Large rounded dark box with subtle white line border) */
-    .spec-box {
-      background: #111111; /* Black box simulating template */
-      border-radius: 40px;
-      border: 1px solid rgba(255, 255, 255, 0.18); /* Filete branco sutil mas visivel */
-      padding: 60px 50px;
-      box-shadow: none;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .spec-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      flex-wrap: wrap;
-      gap: 32px;
-      margin-bottom: 56px;
-    }
-
-    /* Spec Metrics row nested inside spec-box */
-    .spec-metrics {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      margin-top: 64px;
-      padding-top: 64px;
-      display: grid;
-      grid-template-columns: 1.6fr 0.9fr;
-      gap: 64px;
-      align-items: center;
-    }
-
-    @media (max-width: 900px) {
-      .spec-metrics {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        margin-top: 48px;
-        padding-top: 48px;
-      }
-    }
-
-    /* Bento Badges & Colors */
-    .bento-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .bento-badge.badge-success {
-      background: rgba(49, 145, 46, 0.12);
-      border: 1px solid rgba(49, 145, 46, 0.3);
-      color: #4ade80;
-    }
-
-    .bento-badge.badge-warning {
-      background: rgba(166, 128, 41, 0.15);
-      border: 1px solid rgba(166, 128, 41, 0.4);
-      color: #fbbf24;
-    }
-
-    .bento-badge.badge-info {
-      background: rgba(41, 154, 166, 0.12);
-      border: 1px solid rgba(41, 154, 166, 0.35);
-      color: #38bdf8;
-    }
-
-    .bento-badge.badge-featured {
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      color: #ffffff;
-    }
-
-    .badge-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      display: inline-block;
-    }
-
-    .badge-dot.dot-success {
-      background: #4ade80;
-      animation: pulse-green 2s infinite;
-    }
-
-    @keyframes pulse-green {
-      0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
-      }
-      70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
-      }
-      100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
-      }
-    }
-
-    /* WhatsApp Bento Button */
-    .whatsapp-bento-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #25D366; /* WhatsApp Green */
-      color: #ffffff !important;
-      padding: 12px 24px;
-      border-radius: 100px;
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      text-decoration: none;
-      margin-top: 18px;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
-      transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
-      width: fit-content;
-      z-index: 5;
-      position: relative;
-    }
-
-    .whatsapp-bento-btn:hover {
-      background: #20ba5a;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-    }
-
-    .whatsapp-bento-btn svg {
-      width: 16px;
-      height: 16px;
-      fill: currentColor;
-    }
-
-    /* Variação para o Bento Card Featured (Fundo verde do card exige botão branco para contraste) */
-    .bento-card.featured .whatsapp-bento-btn {
-      background: #ffffff;
-      color: #31912E !important;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .bento-card.featured .whatsapp-bento-btn:hover {
-      background: #f3f4f6;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Bento Grid (Our Expertise) */
-    .bento-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin-top: 48px;
-    }
-
-    .bento-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 28px;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 420px;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .bento-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .bento-card:nth-of-type(1):hover {
-      border-color: rgba(74, 222, 128, 0.4);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 30px rgba(74, 222, 128, 0.12);
-    }
-
-    .bento-card.featured {
-      background: #31912E;
-      color: #fff;
-      border: none;
-    }
-
-    .bento-card.featured:hover {
-      box-shadow: 0 20px 45px rgba(49, 145, 46, 0.45);
-    }
-
-    .bento-card:nth-of-type(3):hover {
-      border-color: rgba(56, 189, 248, 0.4);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.12);
-    }
-
-    .bento-card h3 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 12px;
-      color: var(--text);
-    }
-
-    .bento-card.featured h3 {
-      color: #fff;
-    }
-
-    .bento-card p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 24px;
-      line-height: 1.5;
-    }
-
-    .bento-card.featured p {
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    .bento-card .bento-arrow {
-      position: absolute;
-      top: 32px;
-      right: 32px;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      color: var(--accent);
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .bento-card:hover .bento-arrow {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
-
-    .bento-card.featured .bento-arrow {
-      border-color: rgba(255, 255, 255, 0.2);
-      color: #fff;
-    }
-
-    .bento-card.featured:hover .bento-arrow {
-      background: #fff;
-      color: var(--accent2);
-    }
-
-    .bento-card .bento-btn-circle {
-      position: absolute;
-      bottom: 32px;
-      left: 32px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-    }
-
-    .bento-card:hover .bento-btn-circle {
-      transform: scale(1.1) rotate(45deg);
-    }
-
-    .bento-card .bento-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      filter: grayscale(100%);
-      transition: filter 0.4s;
-    }
-
-    .bento-card:hover .bento-img {
-      filter: grayscale(0%);
-    }
-
-    .bento-card.featured .bento-img {
-      filter: none;
-      border-color: rgba(255, 255, 255, 0.1);
-    }
-
-    /* Selo Giratório (Spinning Seal) */
-    .spinning-seal-wrap {
-      position: relative;
-      width: 140px;
-      height: 140px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .spinning-seal {
-      width: 100%;
-      height: 100%;
-      animation: spin 12s linear infinite;
-    }
-
-    .spinning-seal-icon {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background: var(--grad);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 1.2rem;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(41, 118, 166, 0.3);
-      transition: transform 0.2s;
-    }
-
-    .spinning-seal-icon:hover {
-      transform: scale(1.1);
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-
-    /* Portfólio 2x2 (Recent Work) */
+    /* ── PORTFOLIO GRID ── */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -1813,25 +362,40 @@
       transform: scale(1.1) rotate(45deg);
     }
 
-    /* Showcase de Logos */
-    .logo-track {
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+    }
+
+    .footer-inner {
       display: flex;
-      gap: 60px;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       flex-wrap: wrap;
+      gap: 20px;
     }
 
-    .logo-track svg {
-      height: 32px;
-      opacity: 0.45;
-      color: currentColor;
-      transition: opacity 0.3s, color 0.3s;
+    .footer-left p {
+      font-size: 0.85rem;
+      color: #EBF5F6;
+      margin-top: 6px;
     }
 
-    .logo-track svg:hover {
-      opacity: 0.8;
-      color: var(--accent);
+    .footer-right {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-right a {
+      font-size: 0.85rem;
+      color: #EBF5F6;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-right a:hover {
+      color: var(--white);
     }
 
     /* ── SCROLL REVEAL ── */
@@ -1861,41 +425,9 @@
         display: flex;
       }
 
-      .hero-grid-split {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .bento-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-      }
-
-      .spec-box {
-        padding: 48px 24px;
-        border-radius: 28px;
-      }
-
-      .spec-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        margin-bottom: 36px;
-      }
-
       .portfolio-grid {
         grid-template-columns: 1fr;
         gap: 28px;
-      }
-
-      .form-wrapper {
-        grid-template-columns: 1fr;
-        padding: 32px 24px;
-        gap: 32px;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
       }
 
       .footer-inner {
@@ -1949,29 +481,6 @@
       }
     }
 
-    /* ── SUCCESS STATE ── */
-    .success-msg {
-      display: none;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .success-msg .check {
-      font-size: 3rem;
-      margin-bottom: 16px;
-    }
-
-    .success-msg h3 {
-      color: #0C1530;
-      font-size: 1.4rem;
-      margin-bottom: 8px;
-    }
-
-    .success-msg p {
-      color: var(--muted);
-    }
-
-    /* Mobile nav toggle */
     .hamburger {
       display: none;
       background: none;
@@ -1982,22 +491,57 @@
       cursor: pointer;
       font-size: 1rem;
     }
+
+    /* ── FILTER TABS ── */
+    .filter-tabs {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .filter-tab {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 10px 24px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      outline: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .filter-tab:hover,
+    .filter-tab.active {
+      background: rgba(41, 118, 166, 0.10);
+      border-color: rgba(41, 118, 166, 0.35);
+      color: var(--white);
+    }
+
+    .filter-tab.active {
+      box-shadow: 0 0 25px rgba(41, 118, 166, 0.25);
+    }
   </style>
 </head>
 
-<body>
+<body class="theme-light">
 
   <!-- NAV -->
   <nav id="navbar">
     <div class="inner">
       <div class="nav-left">
-        <a href="#especialidade">Como funciona</a>
-        <a href="#especialidade">O que fazemos</a>
-        <a href="portfolio.html">Portfólio</a>
+        <a href="home.html#especialidade">Como funciona</a>
+        <a href="home.html#especialidade">O que fazemos</a>
+        <a href="index.html">Portfólio</a>
       </div>
-      <a href="#" class="logo">Atlas<span>.</span></a>
+      <a href="home.html" class="logo">Atlas<span>.</span></a>
       <div class="nav-right">
-        <a href="#contato" class="nav-faq">Contato</a>
+        <a href="home.html#contato" class="nav-faq">Contato</a>
         <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="nav-cta">Falar com especialista →</a>
       </div>
       <button class="hamburger"
@@ -2006,8 +550,7 @@
   </nav>
 
   <!-- HERO (THEME LIGHT) -->
-  <section class="hero theme-light" style="position: relative; min-height: 75vh; display: flex; align-items: center; justify-content: center; padding: 140px 24px 30px; overflow: hidden;">
-    <!-- Formas fluidas em SVG de fundo para replicar os caminhos claros do template -->
+  <section class="hero theme-light" style="position: relative; min-height: 50vh; display: flex; align-items: center; justify-content: center; padding: 160px 24px 40px; overflow: hidden;">
     <div class="hero-bg-shapes">
       <svg viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;">
         <path opacity="0.12" d="M-100 200C200 100 400 400 700 250C1000 100 1200 300 1500 150" stroke="url(#hero-stroke-grad)" stroke-width="2"/>
@@ -2022,179 +565,32 @@
     </div>
 
     <div class="container hero-container" style="position: relative; z-index: 1; width: 100%; display: flex; flex-direction: column; align-items: center;">
-      
-      <h1 class="hero-headline" style="text-align: center; max-width: 1000px; margin: 0 auto 24px; font-size: clamp(3.2rem, 7vw, 6.2rem); line-height: 1.05; letter-spacing: -0.04em; color: #101C40;">
-        Menos trabalho<br>
-        manual. <span style="color: #1B2F6C;">Mais tempo<br>
-        para</span>&nbsp;<span style="background: #1E567A; color: #ffffff; -webkit-text-fill-color: #ffffff; padding: 0 8px; display: inline-block;">crescer.</span>
+      <span class="hero-badge">Casos de Sucesso</span>
+      <h1 class="hero-headline" style="text-align: center; max-width: 900px; margin: 0 auto 24px; font-size: clamp(3rem, 6vw, 5rem); line-height: 1.1; letter-spacing: -0.04em; color: #101C40;">
+        Nosso Portfólio de <span style="background: #1E567A; color: #ffffff; -webkit-text-fill-color: #ffffff; padding: 0 8px; display: inline-block;">Soluções.</span>
       </h1>
-
-      <p class="hero-sub" style="text-align: center; max-width: 700px; margin: 0 auto 32px; font-size: 1.1rem; color: var(--muted); line-height: 1.7;">
-        A Atlas automatiza atendimentos, organiza tarefas e processos — acessando os dados da sua empresa em tempo real para responder clientes e ajudar sua equipe a trabalhar com mais eficiência.
+      <p class="hero-sub" style="text-align: center; max-width: 650px; margin: 0 auto 10px; font-size: 1.1rem; color: var(--muted); line-height: 1.7;">
+        Conheça em detalhes como ajudamos empresas de diversos setores a eliminar processos repetitivos, integrar ferramentas e escalar suas operações utilizando IA e automações inteligentes.
       </p>
-
-      <div class="hero-scroll-indicator" style="margin-top: 24px;">
-        <a href="#especialidade" class="scroll-down-btn">
-          Como funciona <span style="font-size: 0.8rem; margin-left: 6px; position: relative; top: -1px;">↓</span>
-        </a>
-      </div>
     </div>
   </section>
 
-  <!-- NOSSA ESPECIALIDADE (THEME LIGHT) -->
-  <section class="theme-light" id="especialidade" style="padding: 40px 24px 120px; position: relative; background: #ffffff;">
-    <div class="blob blob-y" style="position: absolute; right: -200px; top: 0; width: 600px; height: 600px; background: radial-gradient(circle, rgba(41, 118, 166, 0.08) 0%, transparent 70%);"></div>
-    <div class="container spec-box theme-dark">
-      <div class="spec-header">
-        <div>
-          <span class="section-label">O que fazemos</span>
-          <h2 class="section-title" style="margin-bottom: 0;">Nossa Especialidade</h2>
-        </div>
-        <p class="section-sub" style="margin: 0; max-width: 480px;">Conectamos tecnologia de ponta aos processos da sua empresa para criar fluxos de trabalho autônomos e integrados.</p>
-      </div>
-
-      <div class="bento-grid">
-        <!-- Card 1 -->
-        <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="bento-card" style="background: #299AA6; border-color: #299AA6; justify-content: flex-start; text-decoration: none; cursor: pointer;">
-          <div>
-            <div class="bento-badge" style="background: #111111; color: #fff; display: inline-flex; padding: 4px 10px; border-radius: 100px; font-size: 0.7rem; font-weight: 700;">🌐 Presença Digital</div>
-            <h3 style="color: #fff; margin-top: 8px; margin-bottom: 6px; font-size: 1.3rem;">Desenvolvimento Web</h3>
-            <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.5; margin-bottom: 12px;">Desenvolvimento de sites e lojas virtuais focados em conversão, ajudando sua empresa a fortalecer a presença digital e gerar mais oportunidades de vendas online.</p>
-          </div>
-          <img src="assets/web_dev_mockup.png" alt="Desenvolvimento Web" class="bento-img">
-        </a>
-
-        <!-- Card 2 -->
-        <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="bento-card" style="background: #A6297E; border-color: #A6297E; justify-content: flex-start; text-decoration: none; cursor: pointer;">
-          <div>
-            <div class="bento-badge" style="background: #111111; color: #fff; display: inline-flex; padding: 4px 10px; border-radius: 100px; font-size: 0.7rem; font-weight: 700;">🔗 Conectividade</div>
-            <h3 style="color: #fff; margin-top: 8px; margin-bottom: 6px; font-size: 1.3rem;">Integrações de Sistemas</h3>
-            <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.5; margin-bottom: 12px;">Conecta ferramentas e automatiza a comunicação entre todas as suas plataformas, evitando retrabalho, perda de informações importantes e processos muito manuais.</p>
-          </div>
-          <img src="assets/api_integration_nodes.png" alt="Integrações de Sistemas" class="bento-img">
-        </a>
-
-        <!-- Card 3 -->
-        <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="bento-card" style="background: #1E567A; border-color: #1E567A; justify-content: flex-start; text-decoration: none; cursor: pointer;">
-          <div>
-            <div class="bento-badge" style="background: #111111; color: #fff; display: inline-flex; padding: 4px 10px; border-radius: 100px; font-size: 0.7rem; font-weight: 700;">🤖 Automação com IA</div>
-            <h3 style="color: #fff; margin-top: 8px; margin-bottom: 6px; font-size: 1.3rem;">Atendimento com IA</h3>
-            <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.5; margin-bottom: 12px;">Automatiza o suporte ao cliente com inteligência artificial, ajudando sua empresa a responder rápido e organizar fluxos para não perder vendas.</p>
-          </div>
-          <img src="assets/ai_chat_interface.png" alt="Atendimento com IA" class="bento-img">
-        </a>
-
-        <!-- Card 4 -->
-        <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="bento-card" style="background: #D97706; border-color: #D97706; justify-content: flex-start; text-decoration: none; cursor: pointer;">
-          <div>
-            <div class="bento-badge" style="background: #111111; color: #fff; display: inline-flex; padding: 4px 10px; border-radius: 100px; font-size: 0.7rem; font-weight: 700;">📅 Produtividade</div>
-            <h3 style="color: #fff; margin-top: 8px; margin-bottom: 6px; font-size: 1.3rem;">Agendamento Inteligente</h3>
-            <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.5; margin-bottom: 12px;">Sistemas automatizados para marcação, confirmação e organização de horários, ajudando a sua empresa a reduzir erros, evitar faltas e melhorar toda sua agenda.</p>
-          </div>
-          <img src="assets/smart_calendar_dashboard.png" alt="Agendamento Inteligente" class="bento-img">
-        </a>
-
-        <!-- Card 5 -->
-        <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="bento-card" style="background: #2976A6; border-color: #2976A6; justify-content: flex-start; text-decoration: none; cursor: pointer;">
-          <div>
-            <div class="bento-badge" style="background: #111111; color: #fff; display: inline-flex; padding: 4px 10px; border-radius: 100px; font-size: 0.7rem; font-weight: 700;">📦 Controle Operacional</div>
-            <h3 style="color: #fff; margin-top: 8px; margin-bottom: 6px; font-size: 1.3rem;">Gestão de Estoque</h3>
-            <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.5; margin-bottom: 12px;">Controle automatizado de produtos, entradas e saídas diárias, ajudando a sua empresa a manter a organização, evitar perdas financeiras e otimizar o estoque.</p>
-          </div>
-          <img src="assets/inventory_management_ui.png" alt="Gestão de Estoque" class="bento-img">
-        </a>
-
-        <!-- Card 6 -->
-        <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="bento-card" style="background: #31912E; border-color: #31912E; justify-content: flex-start; text-decoration: none; cursor: pointer;">
-          <div>
-            <div class="bento-badge" style="background: #111111; color: #fff; display: inline-flex; padding: 4px 10px; border-radius: 100px; font-size: 0.7rem; font-weight: 700;">💼 Vendas & Conversão</div>
-            <h3 style="color: #fff; margin-top: 8px; margin-bottom: 6px; font-size: 1.3rem;">Gestão e CRM</h3>
-            <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.5; margin-bottom: 12px;">Organiza o processo de vendas e funis, ajudando sua equipe a responder rápido, focar nas melhores oportunidades e multiplicar suas conversões.</p>
-          </div>
-          <img src="assets/sales_crm_kanban.png" alt="Gestão e CRM" class="bento-img">
-        </a>
-
-        <!-- Card 7 -->
-        <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="bento-card" style="background: #72A2C4; border-color: #72A2C4; justify-content: flex-start; text-decoration: none; cursor: pointer;">
-          <div>
-            <div class="bento-badge" style="background: #111111; color: #fff; display: inline-flex; padding: 4px 10px; border-radius: 100px; font-size: 0.7rem; font-weight: 700;">⚙️ Eficiência</div>
-            <h3 style="color: #fff; margin-top: 8px; margin-bottom: 6px; font-size: 1.3rem;">Gestão Operacional</h3>
-            <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; line-height: 1.5; margin-bottom: 12px;">Automação de processos internos e organização da empresa, ajudando sua equipe a reduzir a desorganização, escalar a produtividade e manter uma operação fluida.</p>
-          </div>
-          <img src="assets/ops_workflow_dashboard.png" alt="Gestão Operacional" class="bento-img">
-        </a>
-
-        <!-- Card 8 -->
-        <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="bento-card" style="background: #A65929; border-color: #A65929; justify-content: flex-start; text-decoration: none; cursor: pointer;">
-          <div>
-            <div class="bento-badge" style="background: #111111; color: #fff; display: inline-flex; padding: 4px 10px; border-radius: 100px; font-size: 0.7rem; font-weight: 700;">📊 Estratégia</div>
-            <h3 style="color: #fff; margin-top: 8px; margin-bottom: 6px; font-size: 1.3rem;">Dados e Relatórios</h3>
-            <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.5; margin-bottom: 12px;">Transforma os dados da empresa em indicadores precisos e estratégicos, ajudando os gestores a entender métricas reais e a tomar grandes decisões com segurança.</p>
-          </div>
-          <img src="assets/business_analytics_charts.png" alt="Dados e Relatórios" class="bento-img">
-        </a>
-      </div>
-
-      <!-- FRASE MONUMENTAL E METRICAS (NESTED IN SPEC-BOX) -->
-      <div class="spec-metrics">
-        <div style="position: relative;">
-          <h2 style="font-size: clamp(1.2rem, 2.5vw, 1.75rem); font-weight: 800; line-height: 1.3; letter-spacing: -0.01em; color: #fff;">
-            AUTOMATIZAMOS PROCESSOS COMPLEXOS E CRIAMOS AGENTES DE IA QUE DÃO SUPORTE E EFICIÊNCIA PARA SUA OPERAÇÃO CRESCER.
-          </h2>
-          
-          <div style="margin-top: 32px; display: flex; gap: 24px; align-items: center;">
-            <!-- Selo Giratório Animado -->
-            <div class="spinning-seal-wrap" style="width: 120px; height: 120px;">
-              <svg class="spinning-seal" viewBox="0 0 100 100">
-                <defs>
-                  <path id="circlePath" d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" />
-                </defs>
-                <text fill="var(--muted)" font-size="7.5" font-weight="600" letter-spacing="1.5">
-                  <textPath href="#circlePath">
-                    FALE COM ESPECIALISTA • ATLAS OPS •
-                  </textPath>
-                </text>
-              </svg>
-              <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="spinning-seal-icon" style="width: 72px; height: 72px; background: #25D366; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45); display: flex; align-items: center; justify-content: center; border: none; z-index: 5;">
-                <svg viewBox="0 0 24 24" style="width: 44px; height: 44px; fill: #fff;">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-              </a>
-            </div>
-            
-            <p style="font-size: 0.88rem; color: var(--muted); max-width: 220px; line-height: 1.4;">Conecte sua empresa ao futuro da produtividade com nossas soluções customizadas.</p>
-          </div>
-        </div>
-
-        <div>
-          <div class="hero-grid" style="display: flex; flex-direction: column; gap: 2px; background: #E8DCD3; border-radius: 20px; overflow: hidden; margin-top: 0; border: 1px solid #E8DCD3;">
-            <div class="hero-stat" style="text-align: left; padding: 18px 24px; background: #F6EFEB;">
-              <div class="num" style="font-size: 2.2rem; font-weight: 800; color: #A65929; background: none; -webkit-text-fill-color: #A65929; line-height: 1.1;">80%</div>
-              <div class="label" style="font-size: 0.85rem; color: #2C2A29; margin-top: 6px; line-height: 1.4; font-weight: 500;">de redução média em tarefas manuais e repetitivas.</div>
-            </div>
-            <div class="hero-stat" style="text-align: left; padding: 18px 24px; background: #F6EFEB;">
-              <div class="num" style="font-size: 2.2rem; font-weight: 800; color: #A65929; background: none; -webkit-text-fill-color: #A65929; line-height: 1.1;">10x</div>
-              <div class="label" style="font-size: 0.85rem; color: #2C2A29; margin-top: 6px; line-height: 1.4; font-weight: 500;">mais velocidade na execução e entrega dos seus processos.</div>
-            </div>
-            <div class="hero-stat" style="text-align: left; padding: 18px 24px; background: #F6EFEB;">
-              <div class="num" style="font-size: 1.7rem; font-weight: 800; color: #A65929; background: none; -webkit-text-fill-color: #A65929; line-height: 1.1;">Autonomia</div>
-              <div class="label" style="font-size: 0.85rem; color: #2C2A29; margin-top: 6px; line-height: 1.4; font-weight: 500;">Operações estruturadas e atendimentos 100% automatizados.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CASOS DE SUCESSO (THEME LIGHT) -->
-  <section class="theme-light" id="casos" style="padding-bottom: 50px; position: relative;">
+  <!-- CASES SECTION (THEME LIGHT) -->
+  <section class="theme-light" id="casos-portfolio" style="padding-bottom: 120px; position: relative;">
     <div class="container">
-      <span class="section-label" style="font-size: 1rem; color: var(--accent); margin-bottom: 12px; display: inline-block;">Nossos Cases</span>
-      <p class="section-sub" style="max-width: 650px; margin-bottom: 40px; font-size: 1.2rem;">Cada mercado exige abordagens únicas. Unimos tecnologia e inteligência artificial para atender às demandas de diversos segmentos.</p>
       
+      <!-- Filtros por Tipo de Serviço -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" onclick="filterPortfolio('all')">Todos</button>
+        <button class="filter-tab" onclick="filterPortfolio('web')">🌐 Desenv. Web</button>
+        <button class="filter-tab" onclick="filterPortfolio('automacao')">⚙️ Automação de Processos</button>
+        <button class="filter-tab" onclick="filterPortfolio('ia')">🤖 Atendimento & IA</button>
+        <button class="filter-tab" onclick="filterPortfolio('integracoes')">🔗 Integrações</button>
+      </div>
+
       <div class="portfolio-grid">
         <!-- Item 1: Varejo & E-commerce -->
-        <div class="portfolio-item reveal">
+        <div class="portfolio-item reveal" data-category="web">
           <div class="portfolio-img-wrap">
             <img src="assets/whatsapp_ai_dashboard.png" alt="Varejo & E-commerce" class="portfolio-img">
             <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="portfolio-badge-float">↗</a>
@@ -2206,7 +602,7 @@
         </div>
 
         <!-- Item 2: Saúde & Clínicas -->
-        <div class="portfolio-item reveal">
+        <div class="portfolio-item reveal" data-category="ia">
           <div class="portfolio-img-wrap">
             <img src="assets/data_analytics_dashboard.png" alt="Saúde & Clínicas" class="portfolio-img">
             <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="portfolio-badge-float">↗</a>
@@ -2218,7 +614,7 @@
         </div>
 
         <!-- Item 3: Escritórios Jurídicos -->
-        <div class="portfolio-item reveal">
+        <div class="portfolio-item reveal" data-category="automacao">
           <div class="portfolio-img-wrap">
             <img src="assets/process_automation_flow.png" alt="Escritórios Jurídicos" class="portfolio-img">
             <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="portfolio-badge-float">↗</a>
@@ -2230,9 +626,9 @@
         </div>
 
         <!-- Item 4: Finanças & Contabilidade -->
-        <div class="portfolio-item reveal">
+        <div class="portfolio-item reveal" data-category="automacao">
           <div class="portfolio-img-wrap">
-            <img src="assets/hero_illustration.png" alt="Finanças & Contabilidade" class="portfolio-img">
+            <img src="assets/business_analytics_charts.png" alt="Finanças & Contabilidade" class="portfolio-img">
             <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="portfolio-badge-float">↗</a>
           </div>
           <div class="portfolio-info">
@@ -2240,111 +636,52 @@
             <span class="portfolio-desc">Conciliação Bancária Automática, Fluxo de Caixa Real & Relatórios em Tempo Real</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-
-  <!-- CTA STRIP -->
-  <section class="cta-strip theme-dark">
-    <div class="container">
-      <h2 class="section-title" style="margin:0 auto 16px;">Pronto para transformar a sua empresa?</h2>
-      <p>Comece por aqui e descubra como a Atlas pode<br>automatizar a sua vida.</p>
-      <a href="#contato" class="btn-primary">Quero meu diagnóstico
-        gratuito →</a>
-    </div>
-  </section>
-
-
-  <!-- FORM -->
-  <section class="form-section theme-light" id="contato" style="background: #ffffff;">
-    <div class="blob blob-f"></div>
-    <div class="container">
-      <div class="form-wrapper">
-        <div class="form-info reveal">
-          <span class="section-label">Fale com a Atlas</span>
-          <h2>Vamos mapear o potencial da sua empresa</h2>
-          <p>Preencha o formulário e um especialista da Atlas entrará em contato para entender seus processos e
-            apresentar as melhores oportunidades de automação — sem compromisso.</p>
-          <div class="form-perks">
-            <div class="perk">
-              <div class="perk-check">✓</div>
-              Diagnóstico gratuito de processos automatizáveis
-            </div>
-            <div class="perk">
-              <div class="perk-check">✓</div>
-              Estimativa de economia e ROI personalizada
-            </div>
-            <div class="perk">
-              <div class="perk-check">✓</div>
-              Proposta sem compromisso em até 48 horas
-            </div>
-            <div class="perk">
-              <div class="perk-check">✓</div>
-              Especialistas com experiência em mais de 10 segmentos
-            </div>
+        <!-- Item 5: Atendimento e Suporte com IA -->
+        <div class="portfolio-item reveal" data-category="ia">
+          <div class="portfolio-img-wrap">
+            <img src="assets/ai_chat_interface.png" alt="Atendimento e Suporte com IA" class="portfolio-img">
+            <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="portfolio-badge-float">↗</a>
+          </div>
+          <div class="portfolio-info">
+            <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="portfolio-title">Agente de IA para Atendimento</a>
+            <span class="portfolio-desc">Chatbot Inteligente treinado nos dados da empresa para suporte imediato e qualificação de Leads</span>
           </div>
         </div>
-        <div class="form-card reveal">
-          <h3>Fale com um especialista</h3>
-          <p class="sub">Retorno garantido em até 1 dia útil.</p>
-          <div id="form-fields">
-            <div class="field-group">
-              <div class="form-row">
-                <div class="field">
-                  <label>Nome completo</label>
-                  <input type="text" placeholder="João Silva" id="f-nome">
-                </div>
-                <div class="field">
-                  <label>Cargo</label>
-                  <input type="text" placeholder="CEO, Gerente, Sócio..." id="f-cargo">
-                </div>
-              </div>
-              <div class="field">
-                <label>E-mail corporativo</label>
-                <input type="email" placeholder="joao@suaempresa.com.br" id="f-email">
-              </div>
-              <div class="field">
-                <label>WhatsApp</label>
-                <input type="tel" placeholder="(11) 99999-9999" id="f-tel">
-              </div>
-              <div class="form-row">
-                <div class="field">
-                  <label>Empresa</label>
-                  <input type="text" placeholder="Nome da empresa" id="f-empresa">
-                </div>
-                <div class="field">
-                  <label>Segmento</label>
-                  <select id="f-segmento">
-                    <option value="">Selecione...</option>
-                    <option>Varejo / E-commerce</option>
-                    <option>Saúde / Clínicas</option>
-                    <option>Jurídico</option>
-                    <option>Logística</option>
-                    <option>Financeiro / Contabilidade</option>
-                    <option>Educação</option>
-                    <option>RH / Departamento Pessoal</option>
-                    <option>Imobiliário</option>
-                    <option>Indústria</option>
-                    <option>Outro</option>
-                  </select>
-                </div>
-              </div>
-              <div class="field">
-                <label>Conte um pouco sobre seu processo</label>
-                <textarea placeholder="Quais processos você gostaria de automatizar? Qual é o maior gargalo hoje?"
-                  id="f-msg"></textarea>
-              </div>
-            </div>
-            <button class="form-submit" onclick="window.open('https://wa.me/5511954047910','_blank')">Quero meu
-              diagnóstico gratuito →</button>
-            <p class="form-note">🔒 Seus dados estão seguros. Não enviamos spam.</p>
+
+        <!-- Item 6: Integrações de APIs -->
+        <div class="portfolio-item reveal" data-category="integracoes">
+          <div class="portfolio-img-wrap">
+            <img src="assets/api_integration_nodes.png" alt="Integrações de APIs" class="portfolio-img">
+            <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="portfolio-badge-float">↗</a>
           </div>
-          <div class="success-msg" id="success-msg">
-            <div class="check">✅</div>
-            <h3>Mensagem enviada!</h3>
-            <p>Um especialista da Atlas entrará em contato com você em até 1 dia útil. Fique de olho no seu WhatsApp e
-              e-mail!</p>
+          <div class="portfolio-info">
+            <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="portfolio-title">Sincronização entre Plataformas</a>
+            <span class="portfolio-desc">Fluxo de Dados em Tempo Real conectando ERP, CRM e ferramentas de marketing sem atritos</span>
+          </div>
+        </div>
+
+        <!-- Item 7: Gestão Operacional de Equipes -->
+        <div class="portfolio-item reveal" data-category="automacao">
+          <div class="portfolio-img-wrap">
+            <img src="assets/ops_workflow_dashboard.png" alt="Gestão Operacional de Equipes" class="portfolio-img">
+            <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="portfolio-badge-float">↗</a>
+          </div>
+          <div class="portfolio-info">
+            <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="portfolio-title">Gestão de Workflows e Tarefas</a>
+            <span class="portfolio-desc">Atribuição de responsabilidades automática e monitoramento do progresso das metas</span>
+          </div>
+        </div>
+
+        <!-- Item 8: Funil de Vendas Automatizado -->
+        <div class="portfolio-item reveal" data-category="integracoes">
+          <div class="portfolio-img-wrap">
+            <img src="assets/sales_crm_kanban.png" alt="Funil de Vendas Automatizado" class="portfolio-img">
+            <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="portfolio-badge-float">↗</a>
+          </div>
+          <div class="portfolio-info">
+            <a href="https://wa.me/5511954047910" target="_blank" rel="noopener" class="portfolio-title">CRM & Pipeline Inteligente</a>
+            <span class="portfolio-desc">Distribuição de contatos, notificações de novos negócios e acompanhamento active de clientes</span>
           </div>
         </div>
       </div>
@@ -2356,14 +693,14 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-left">
-          <a href="#" class="logo" style="color: #EBF5F6;">Atlas<span style="color: var(--accent);">.</span></a>
+          <a href="home.html" class="logo" style="color: #EBF5F6;">Atlas<span style="color: var(--accent);">.</span></a>
           <p style="color: #a0b1b3;">Gestão e Tecnologia — Automação inteligente para empresas que querem crescer.</p>
         </div>
         <div class="footer-right">
-          <a href="#especialidade" style="color: #EBF5F6;">Como funciona</a>
-          <a href="#especialidade" style="color: #EBF5F6;">O que fazemos</a>
-          <a href="portfolio.html" style="color: #EBF5F6;">Portfólio</a>
-          <a href="#contato" style="color: #EBF5F6;">Contato</a>
+          <a href="home.html#especialidade" style="color: #EBF5F6;">Como funciona</a>
+          <a href="home.html#especialidade" style="color: #EBF5F6;">O que fazemos</a>
+          <a href="index.html" style="color: #EBF5F6;">Portfólio</a>
+          <a href="home.html#contato" style="color: #EBF5F6;">Contato</a>
         </div>
       </div>
       <div style="border-top:1px solid var(--border);margin-top:32px;padding-top:24px;text-align:center;">
@@ -2379,27 +716,6 @@
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    // Dynamic Navbar Theme based on section in viewport
-    const navObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const isDark = entry.target.classList.contains('theme-dark');
-          document.body.classList.toggle('dark-nav', isDark);
-        }
-      });
-    }, {
-      rootMargin: '-10% 0px -80% 0px'
-    });
-    document.querySelectorAll('section, footer').forEach(el => navObserver.observe(el));
-
-    // Segment tabs
-    function switchSeg(id) {
-      document.querySelectorAll('.seg-content').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.seg-tab').forEach(el => el.classList.remove('active'));
-      document.getElementById('seg-' + id).classList.add('active');
-      event.currentTarget.classList.add('active');
-    }
-
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -2409,56 +725,6 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Form submit
-    function submitForm() {
-      const nome = document.getElementById('f-nome').value.trim();
-      const email = document.getElementById('f-email').value.trim();
-      const tel = document.getElementById('f-tel').value.trim();
-      if (!nome || !email || !tel) {
-        alert('Por favor, preencha pelo menos nome, e-mail e WhatsApp.');
-        return;
-      }
-      document.getElementById('form-fields').style.display = 'none';
-      document.getElementById('success-msg').style.display = 'block';
-    }
-
-    // Counter animation
-    function animateCounters() {
-      document.querySelectorAll('.number, .num').forEach(el => {
-        const text = el.textContent;
-        const num = parseFloat(text.replace(/[^0-9.]/g, ''));
-        if (!num || el.dataset.animated) return;
-        el.dataset.animated = true;
-        let start = 0;
-        const duration = 1800;
-        const step = (timestamp) => {
-          if (!start) start = timestamp;
-          const progress = Math.min((timestamp - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3);
-          const current = num * eased;
-          const suffix = text.replace(/[0-9.]/g, '').trim();
-          el.textContent = (Number.isInteger(num) ? Math.floor(current) : current.toFixed(1)) + suffix;
-          if (progress < 1) requestAnimationFrame(step);
-        };
-        requestAnimationFrame(step);
-      });
-    }
-
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) animateCounters();
-      });
-    }, { threshold: 0.3 });
-    document.querySelectorAll('.results-grid, .hero-grid').forEach(el => counterObserver.observe(el));
-
-    // Phone mask
-    document.getElementById('f-tel').addEventListener('input', function () {
-      let v = this.value.replace(/\D/g, '');
-      if (v.length <= 10) v = v.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
-      else v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
-      this.value = v;
-    });
 
     // Mobile menu toggle
     function toggleMobileMenu() {
@@ -2485,6 +751,34 @@
         }
       });
     });
+
+    // Função de filtro do Portfólio
+    function filterPortfolio(category) {
+      // Atualizar classe ativa das abas
+      document.querySelectorAll('.filter-tab').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Define a aba clicada como ativa
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+      }
+
+      // Filtrar itens
+      const items = document.querySelectorAll('.portfolio-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'flex';
+          // Aciona pequena transição suave
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+          }, 50);
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
   </script>
 </body>
 
