@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas B &#8212; Identidade Visual &amp; Sistema de Cores</title>
+  <meta name="description" content="Guia de identidade visual alternativo para a marca Atlas. Opção Deep Navy e Steel Blue para votação de marca.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════════
+       ATLAS BRAND IDENTITY — Stylesheet (Opção B)
+       Gestão e Tecnologia — Automação & Agentes de IA
+       ═══════════════════════════════════════════ */
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-primary: #2976A6;
+      --color-primary-rgb: 41, 118, 166;
+      --color-accent: #101C40;
+      --color-accent-rgb: 16, 28, 64;
+      --color-primary-dark: #1E567A;
+      --color-primary-medium: #72A2C4;
+      --color-accent-warm: #1B2F6C;
+      --color-accent-dark: #0C1530;
+      --color-primary-ice: #EBF2F6;
+      --color-primary-mist: #D6E4EE;
+      --color-accent-light: #EDF0FA;
+      --color-accent-peach: #D1DAF2;
+      --color-white: #FFFFFF;
+      --color-snow: #F2F2F2;
+      --color-gray-light: #E5E7EB;
+      --color-gray-medium: #9CA3AF;
+      --color-gray-text: #6B7280;
+      --color-dark: #090A08;
+      --font-display: 'Manrope', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-snow);
+      color: var(--color-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── NAV ────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(20px) saturate(1.6);
+      -webkit-backdrop-filter: blur(20px) saturate(1.6);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      transition: box-shadow 0.3s ease;
+    }
+    .nav.scrolled {
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 2rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--color-accent);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .nav-brand .icon {
+      color: var(--color-primary);
+      font-size: 1.1rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+      list-style: none;
+      overflow-x: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--color-gray-text);
+      text-decoration: none;
+      padding: 0.4rem 0.7rem;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+    .nav-links a:hover {
+      color: var(--color-primary);
+      background: var(--color-primary-ice);
+    }
+    .nav-links a.active {
+      color: var(--color-primary);
+      background: var(--color-primary-ice);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+
+    /* ── HERO ───────────────────────────────── */
+    .hero {
+      margin-top: 64px;
+      background: radial-gradient(circle at 50% 20%, #101C40 0%, #090A08 55%) no-repeat fixed #090A08;
+      padding: clamp(4rem, 10vw, 8rem) clamp(1rem, 4vw, 2rem);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 80%;
+      height: 200%;
+      background: radial-gradient(ellipse, rgba(114,162,196,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(8px);
+    }
+    .hero-badge .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--color-primary-medium);
+      border-radius: 50%;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      color: #fff;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 span {
+      color: var(--color-primary-medium);
+    }
+    .hero p {
+      color: rgba(255,255,255,0.72);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      max-width: 540px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .hero-meta-item {
+      text-align: center;
+    }
+    .hero-meta-item .value {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #fff;
+    }
+    .hero-meta-item .label {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 0.15rem;
+    }
+
+    /* ── LAYOUT ─────────────────────────────── */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 2rem);
+    }
+
+    section {
+      padding: clamp(3rem, 8vw, 6rem) 0;
+    }
+
+    .section-header {
+      margin-bottom: clamp(2rem, 4vw, 3.5rem);
+    }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      color: var(--color-dark);
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+    }
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--color-gray-text);
+      margin-top: 0.6rem;
+      max-width: 600px;
+      line-height: 1.65;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--color-gray-light);
+      margin: 0;
+    }
+
+    /* ── COLOR SWATCH CARD ─────────────────── */
+    .color-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    .color-grid--2 { grid-template-columns: repeat(2, 1fr); }
+    .color-grid--3 { grid-template-columns: repeat(3, 1fr); }
+    .color-grid--4 { grid-template-columns: repeat(4, 1fr); }
+    .color-grid--5 { grid-template-columns: repeat(5, 1fr); }
+    .color-grid--6 { grid-template-columns: repeat(6, 1fr); }
+
+    @media (max-width: 900px) {
+      .color-grid--4 { grid-template-columns: repeat(2, 1fr); }
+      .color-grid--5 { grid-template-columns: repeat(3, 1fr); }
+      .color-grid--6 { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .color-grid--2 { grid-template-columns: 1fr; }
+      .color-grid--3 { grid-template-columns: 1fr; }
+      .color-grid--4 { grid-template-columns: repeat(2, 1fr); }
+      .color-grid--5 { grid-template-columns: repeat(2, 1fr); }
+      .color-grid--6 { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .swatch {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+    .swatch:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    }
+    .swatch:active {
+      transform: translateY(-2px) scale(0.98);
+    }
+    .swatch-color {
+      height: 110px;
+      position: relative;
+      transition: height 0.3s ease;
+    }
+    .swatch--primary .swatch-color { height: 150px; }
+    .swatch--small .swatch-color { height: 80px; }
+
+    .swatch-copy-toast {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      backdrop-filter: blur(8px);
+    }
+    .swatch.copied .swatch-copy-toast {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .swatch-info {
+      padding: 0.85rem 1rem;
+    }
+    .swatch-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--color-dark);
+      margin-bottom: 0.2rem;
+    }
+    .swatch-hex {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--color-gray-text);
+    }
+    .swatch-meta {
+      font-size: 0.65rem;
+      color: var(--color-gray-medium);
+      margin-top: 0.35rem;
+      line-height: 1.45;
+    }
+    .swatch-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      margin-top: 0.4rem;
+    }
+    .swatch-tag--primary {
+      background: var(--color-primary-ice);
+      color: var(--color-primary);
+    }
+    .swatch-tag--accent {
+      background: #EDF0FA;
+      color: var(--color-accent);
+    }
+    .swatch-tag--comp {
+      background: #F6EFEB;
+      color: #A65929;
+    }
+
+    /* ── SUBSECTION ─────────────────────────── */
+    .subsection {
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+    .subsection-title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--color-dark);
+      margin-bottom: 0.35rem;
+      letter-spacing: -0.01em;
+    }
+    .subsection-desc {
+      font-size: 0.88rem;
+      color: var(--color-gray-text);
+      margin-bottom: 1.25rem;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    /* ── GRADIENT STRIPS ───────────────────── */
+    .gradient-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .gradient-card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .gradient-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    }
+    .gradient-strip {
+      height: 90px;
+    }
+    .gradient-card-info {
+      padding: 0.85rem 1rem;
+    }
+    .gradient-card-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--color-dark);
+      margin-bottom: 0.15rem;
+    }
+    .gradient-card-css {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--color-gray-text);
+      word-break: break-all;
+      line-height: 1.5;
+    }
+    .gradient-card-use {
+      font-size: 0.68rem;
+      color: var(--color-gray-medium);
+      margin-top: 0.4rem;
+    }
+
+    /* ── TYPOGRAPHY SHOWCASE ────────────────── */
+    .type-showcase {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid rgba(0,0,0,0.05);
+      padding: clamp(2rem, 4vw, 3rem);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+    @media (max-width: 768px) {
+      .type-showcase { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    .type-family {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    .type-family-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .type-specimen-display {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      color: var(--color-dark);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .type-specimen-body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      color: var(--color-dark);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .type-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--color-dark);
+    }
+    .type-weights {
+      font-size: 0.78rem;
+      color: var(--color-gray-text);
+      line-height: 1.6;
+    }
+    .type-scale {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid rgba(0,0,0,0.05);
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+      margin-top: 1.5rem;
+    }
+    .type-scale-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--color-gray-light);
+    }
+    .type-scale-row:last-child { border-bottom: none; }
+    .type-scale-token {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--color-primary);
+      min-width: 120px;
+      flex-shrink: 0;
+    }
+    .type-scale-sample {
+      flex: 1;
+      color: var(--color-dark);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .type-scale-size {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--color-gray-medium);
+      min-width: 60px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* ── ACCESSIBILITY TABLE ────────────────── */
+    .access-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .access-table th {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--color-gray-text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-align: left;
+      padding: 1rem 1.2rem;
+      background: var(--color-snow);
+      border-bottom: 1px solid var(--color-gray-light);
+    }
+    .access-table td {
+      padding: 0.85rem 1.2rem;
+      font-size: 0.82rem;
+      border-bottom: 1px solid var(--color-gray-light);
+      vertical-align: middle;
+    }
+    .access-table tr:last-child td { border-bottom: none; }
+    .access-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+    }
+    .access-chip--pass {
+      background: #D1FAE5;
+      color: #059669;
+    }
+    .access-chip--warn {
+      background: #FEF3C7;
+      color: #D97706;
+    }
+    .access-chip--fail {
+      background: #FEE2E2;
+      color: #DC2626;
+    }
+    .access-preview {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 28px;
+      border-radius: 6px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.72rem;
+    }
+
+    /* ── TOKEN CODE BLOCK ──────────────────── */
+    .code-block {
+      background: #101C40;
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+    }
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.25rem;
+      background: rgba(255,255,255,0.04);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .code-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .code-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .code-dots span:nth-child(1) { background: #FF5F56; }
+    .code-dots span:nth-child(2) { background: #FFBD2E; }
+    .code-dots span:nth-child(3) { background: #27C93F; }
+    .code-filename {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.45);
+    }
+    .code-copy-btn {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.45);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .code-copy-btn:hover {
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.8);
+    }
+    .code-body {
+      padding: 1.5rem 1.25rem;
+      overflow-x: auto;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+    .code-body pre {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.7);
+      white-space: pre;
+      tab-size: 2;
+    }
+    .code-body .comment { color: rgba(255,255,255,0.28); }
+    .code-body .prop { color: #72A2C4; }
+    .code-body .val { color: #1B2F6C; }
+    .code-body .selector { color: #101C40; }
+    .code-body .bracket { color: rgba(255,255,255,0.4); }
+
+    /* ── COMBINATION CARDS ─────────────────── */
+    .combo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .combo-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .combo-card:hover { transform: translateY(-2px); }
+    .combo-preview {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .combo-label {
+      padding: 0.6rem 0.8rem;
+      background: #fff;
+      font-size: 0.68rem;
+      color: var(--color-gray-text);
+      line-height: 1.45;
+    }
+
+    /* ── SPACING VISUAL ────────────────────── */
+    .spacing-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .spacing-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #fff;
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .spacing-token {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--color-primary);
+      min-width: 100px;
+      flex-shrink: 0;
+    }
+    .spacing-bar-wrap {
+      flex: 1;
+      height: 28px;
+      display: flex;
+      align-items: center;
+    }
+    .spacing-bar {
+      height: 100%;
+      background: linear-gradient(135deg, var(--color-primary-ice) 0%, var(--color-primary-mist) 100%);
+      border-radius: 6px;
+      border: 1px solid rgba(41,118,166,0.12);
+      transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .spacing-value {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--color-gray-medium);
+      min-width: 65px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* ── SHADOW CARDS ──────────────────────── */
+    .shadow-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+    .shadow-card {
+      background: #fff;
+      border-radius: 14px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      transition: transform 0.3s ease;
+    }
+    .shadow-card:hover { transform: translateY(-2px); }
+    .shadow-card-label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      color: var(--color-gray-text);
+    }
+
+    /* ── USE GUIDE TABLE ───────────────────── */
+    .guide-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .guide-table th {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--color-gray-text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-align: left;
+      padding: 0.85rem 1.2rem;
+      background: var(--color-snow);
+      border-bottom: 1px solid var(--color-gray-light);
+    }
+    .guide-table td {
+      padding: 0.75rem 1.2rem;
+      font-size: 0.8rem;
+      border-bottom: 1px solid var(--color-gray-light);
+      vertical-align: middle;
+    }
+    .guide-table tr:last-child td { border-bottom: none; }
+    .guide-table .color-dot {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+    .guide-table .hex-code {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--color-gray-text);
+    }
+
+    /* ── FOOTER ─────────────────────────────── */
+    .footer {
+      background: var(--color-dark);
+      color: rgba(255,255,255,0.5);
+      padding: 3rem clamp(1rem, 4vw, 2rem);
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 0.6rem;
+    }
+    .footer-brand .icon { color: var(--color-primary); }
+    .footer p {
+      font-size: 0.8rem;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+    .footer-line {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 1.5rem 0;
+    }
+    .footer-copy {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ── ALERT BOX ─────────────────────────── */
+    .alert {
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    .alert-icon {
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .alert--info {
+      background: var(--color-primary-ice);
+      border: 1px solid rgba(41,118,166,0.15);
+      color: var(--color-primary-dark);
+    }
+    .alert--warning {
+      background: #FEF3C7;
+      border: 1px solid rgba(217,119,6,0.2);
+      color: #92400E;
+    }
+    .alert--accent {
+      background: var(--color-accent-light);
+      border: 1px solid rgba(16,28,64,0.12);
+      color: var(--color-accent);
+    }
+
+    /* ── PROPORTION BAR ────────────────────── */
+    .proportion-bar {
+      display: flex;
+      height: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 1.25rem;
+      margin-bottom: 0.6rem;
+    }
+    .proportion-segment {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: #fff;
+      transition: flex 0.5s ease;
+    }
+    .proportion-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: var(--color-gray-text);
+    }
+
+    /* ── UTILITY ────────────────────────────── */
+    .mt-0 { margin-top: 0 !important; }
+    .mt-1 { margin-top: 1rem; }
+    .mt-2 { margin-top: 2rem; }
+    .mb-1 { margin-bottom: 1rem; }
+    .mb-2 { margin-bottom: 2rem; }
+
+    /* ── ANIMATIONS ─────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── PRINT ──────────────────────────────── */
+    @media print {
+      .nav { display: none; }
+      .hero { margin-top: 0; padding: 2rem; }
+      section { padding: 1.5rem 0; }
+      .swatch:hover { transform: none; box-shadow: none; }
+      .fade-in { opacity: 1; transform: none; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-brand">
+        <span class="icon">&#9670;</span> Atlas Opção B
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#primarias">Primárias</a></li>
+        <li><a href="#secundarias">Secundárias</a></li>
+        <li><a href="#suporte">Suporte</a></li>
+        <li><a href="#complementares">Complementares</a></li>
+        <li><a href="#neutras">Neutras</a></li>
+        <li><a href="#semanticas">Semânticas</a></li>
+        <li><a href="#gradientes">Gradientes</a></li>
+        <li><a href="#tipografia">Tipografia</a></li>
+        <li><a href="#acessibilidade">Acessibilidade</a></li>
+        <li><a href="#combinacoes">Combinações</a></li>
+        <li><a href="#espacamentos">Espaçamentos</a></li>
+        <li><a href="#tokens">Tokens CSS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <header class="hero" id="top">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Opção Alternativa (Navy &amp; Steel Blue)
+      </div>
+      <h1>Identidade Visual B<br>&amp; Sistema de <span>Cores</span></h1>
+      <p>Paleta corporativa sóbria baseada nas cores solicitadas para a Atlas. Solidez de governança e confiança operacional. Menos trabalho manual. Mais tempo para crescer.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="value">42</div>
+          <div class="label">Cores</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="value">5</div>
+          <div class="label">Gradientes</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="value">3</div>
+          <div class="label">Fontes</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="value">Corporate</div>
+          <div class="label">Estilo</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ SECTION: PALETA PRINCIPAL ═══ -->
+  <section id="primarias">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">3.2 &#8212; Paleta Principal (Core)</div>
+        <div class="section-title">As 5 Cores Fundamentais</div>
+        <div class="section-subtitle">Estas são as 5 cores exigidas como base principal da identidade visual, cobrindo estruturas, destaques, fundo e feedbacks.</div>
+      </div>
+
+      <div class="color-grid color-grid--5 fade-in">
+        <div class="swatch swatch--primary" onclick="copyHex(this, '#101C40')">
+          <div class="swatch-color" style="background: #101C40;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Deep Navy</div>
+            <div class="swatch-hex">#101C40</div>
+            <span class="swatch-tag swatch-tag--accent">Fundo Estrutural</span>
+          </div>
+        </div>
+        
+        <div class="swatch swatch--primary" onclick="copyHex(this, '#2976A6')">
+          <div class="swatch-color" style="background: #2976A6;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Steel Blue</div>
+            <div class="swatch-hex">#2976A6</div>
+            <span class="swatch-tag swatch-tag--primary">Cor de Destaque</span>
+          </div>
+        </div>
+        
+        <div class="swatch swatch--primary" onclick="copyHex(this, '#F2F2F2')">
+          <div class="swatch-color" style="background: #F2F2F2;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Cinza Neve</div>
+            <div class="swatch-hex">#F2F2F2</div>
+            <span class="swatch-tag" style="background: #E5E7EB; color: #6B7280;">Neutro Claro</span>
+          </div>
+        </div>
+
+        <div class="swatch swatch--primary" onclick="copyHex(this, '#31912E')">
+          <div class="swatch-color" style="background: #31912E;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Verde Sucesso</div>
+            <div class="swatch-hex">#31912E</div>
+            <span class="swatch-tag" style="background: #EAF6EA; color: #31912E;">Feedback</span>
+          </div>
+        </div>
+
+        <div class="swatch swatch--primary" onclick="copyHex(this, '#090A08')">
+          <div class="swatch-color" style="background: #090A08;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Rich Black</div>
+            <div class="swatch-hex">#090A08</div>
+            <span class="swatch-tag" style="background: #E5E7EB; color: #090A08;">Fundo Dark</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION: CORES SECUNDÁRIAS ═══ -->
+  <section id="secundarias">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">3.3 &#8212; Cores Secundárias</div>
+        <div class="section-title">Variações de Tom</div>
+        <div class="section-subtitle">Derivadas por luminosidade matemática para criar relevo em menus, hovers e dashboards.</div>
+      </div>
+
+      <div class="color-grid color-grid--4 fade-in">
+        <div class="swatch" onclick="copyHex(this, '#1E567A')">
+          <div class="swatch-color" style="background: #1E567A;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Steel Blue Dark</div>
+            <div class="swatch-hex">#1E567A</div>
+            <div class="swatch-meta">L - 11%<br>Hovers e botões</div>
+          </div>
+        </div>
+        <div class="swatch" onclick="copyHex(this, '#72A2C4')">
+          <div class="swatch-color" style="background: #72A2C4;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Steel Blue Medium</div>
+            <div class="swatch-hex">#72A2C4</div>
+            <div class="swatch-meta">L + 19%, S - 22%<br>Bordas e ícones</div>
+          </div>
+        </div>
+        <div class="swatch" onclick="copyHex(this, '#1B2F6C')">
+          <div class="swatch-color" style="background: #1B2F6C;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Navy Warm</div>
+            <div class="swatch-hex">#1B2F6C</div>
+            <div class="swatch-meta">L + 11%<br>Submenus e cards</div>
+          </div>
+        </div>
+        <div class="swatch" onclick="copyHex(this, '#0C1530')">
+          <div class="swatch-color" style="background: #0C1530;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Navy Dark</div>
+            <div class="swatch-hex">#0C1530</div>
+            <div class="swatch-meta">L - 4%<br>Fundo de modais escuros</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION: TINTS & SHADES ═══ -->
+  <section id="suporte">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">3.4 &#8212; Cores de Suporte</div>
+        <div class="section-title">Tints &amp; Shades Suaves</div>
+        <div class="section-subtitle">Tons diluídos e elegantes ideais para banners leves, respiro visual e painéis de dados.</div>
+      </div>
+
+      <div class="color-grid color-grid--4 fade-in">
+        <div class="swatch" onclick="copyHex(this, '#EBF2F6')">
+          <div class="swatch-color" style="background: #EBF2F6;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Steel Ice</div>
+            <div class="swatch-hex">#EBF2F6</div>
+            <div class="swatch-meta">L = 95%<br>Background de alertas</div>
+          </div>
+        </div>
+        <div class="swatch" onclick="copyHex(this, '#D6E4EE')">
+          <div class="swatch-color" style="background: #D6E4EE;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Steel Mist</div>
+            <div class="swatch-hex">#D6E4EE</div>
+            <div class="swatch-meta">L = 88%<br>Faixas, divisórias</div>
+          </div>
+        </div>
+        <div class="swatch" onclick="copyHex(this, '#EDF0FA')">
+          <div class="swatch-color" style="background: #EDF0FA;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Navy Light</div>
+            <div class="swatch-hex">#EDF0FA</div>
+            <div class="swatch-meta">L = 96%<br>Fundo claro de widgets</div>
+          </div>
+        </div>
+        <div class="swatch" onclick="copyHex(this, '#D1DAF2')">
+          <div class="swatch-color" style="background: #D1DAF2;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Navy Soft</div>
+            <div class="swatch-hex">#D1DAF2</div>
+            <div class="swatch-meta">L = 90%<br>Fronteira e badges neutros</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION: COMPLEMENTARES ═══ -->
+  <section id="complementares" style="background: var(--color-white);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">3.5 &#8212; Cores Complementares</div>
+        <div class="section-title">Contraste Harmônico</div>
+        <div class="section-subtitle">Derivadas matematicamente por rotação angular de Hue para criar focos de atenção imediatos e métricas.</div>
+      </div>
+
+      <!-- Complementares Diretas -->
+      <div class="subsection fade-in">
+        <div class="subsection-title">Complementares Diretas (180&#176;)</div>
+        <div class="subsection-desc">Máximo contraste visual. Rotacionadas diretamente da primária correspondente.</div>
+        <div class="color-grid color-grid--2">
+          <div class="swatch" onclick="copyHex(this, '#A65929')">
+            <div class="swatch-color" style="background: #A65929;">
+              <div class="swatch-copy-toast">Copiado!</div>
+            </div>
+            <div class="swatch-info">
+              <div class="swatch-name">Terracota</div>
+              <div class="swatch-hex">#A65929</div>
+              <div class="swatch-meta">Complementar de Steel Blue (203&#176; + 180&#176; = 23&#176;)<br>Metas de conversão, avisos importantes</div>
+              <span class="swatch-tag swatch-tag--comp">Complementar</span>
+            </div>
+          </div>
+          <div class="swatch" onclick="copyHex(this, '#403010')">
+            <div class="swatch-color" style="background: #403010;">
+              <div class="swatch-copy-toast">Copiado!</div>
+            </div>
+            <div class="swatch-info">
+              <div class="swatch-name">Bronze Escuro</div>
+              <div class="swatch-hex">#403010</div>
+              <div class="swatch-meta">Complementar de Deep Navy (225&#176; + 180&#176; = 45&#176;)<br>Bordas e contraste secundário em light mode</div>
+              <span class="swatch-tag swatch-tag--comp">Complementar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Split-Complementary -->
+      <div class="subsection fade-in">
+        <div class="subsection-title">Split-Complementary</div>
+        <div class="subsection-desc">Contraste com menor tensão cromática. Adjacentes da complementar de Steel Blue.</div>
+        <div class="color-grid color-grid--2">
+          <div class="swatch" onclick="copyHex(this, '#A62929')">
+            <div class="swatch-color" style="background: #A62929;">
+              <div class="swatch-copy-toast">Copiado!</div>
+            </div>
+            <div class="swatch-info">
+              <div class="swatch-name">Vermelho Alerta</div>
+              <div class="swatch-hex">#A62929</div>
+              <div class="swatch-meta">Alertas críticos de erros em workflows</div>
+            </div>
+          </div>
+          <div class="swatch" onclick="copyHex(this, '#A68029')">
+            <div class="swatch-color" style="background: #A68029;">
+              <div class="swatch-copy-toast">Copiado!</div>
+            </div>
+            <div class="swatch-info">
+              <div class="swatch-name">Ouro Envelhecido</div>
+              <div class="swatch-hex">#A68029</div>
+              <div class="swatch-meta">Selo Enterprise, upgrade de contas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Triádica -->
+      <div class="subsection fade-in">
+        <div class="subsection-title">Harmonia Triádica</div>
+        <div class="subsection-desc">Cores equidistantes (120&#176;) que garantem riqueza tonal e contraste equilibrado.</div>
+        <div class="color-grid color-grid--2">
+          <div class="swatch" onclick="copyHex(this, '#A6297E')">
+            <div class="swatch-color" style="background: #A6297E;">
+              <div class="swatch-copy-toast">Copiado!</div>
+            </div>
+            <div class="swatch-info">
+              <div class="swatch-name">Ametista</div>
+              <div class="swatch-hex">#A6297E</div>
+              <div class="swatch-meta">Mapeamento de marketing e e-mails de clientes</div>
+            </div>
+          </div>
+          <div class="swatch" onclick="copyHex(this, '#7EA629')">
+            <div class="swatch-color" style="background: #7EA629;">
+              <div class="swatch-copy-toast">Copiado!</div>
+            </div>
+            <div class="swatch-info">
+              <div class="swatch-name">Verde Oliva</div>
+              <div class="swatch-hex">#7EA629</div>
+              <div class="swatch-meta">Métricas de latência de servidores</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tints Complementares -->
+      <div class="subsection fade-in">
+        <div class="subsection-title">Tints das Complementares (Fundo)</div>
+        <div class="subsection-desc">Luminosidade a 95% para fundos contextuais limpos e legibilidade inabalável.</div>
+        <div class="color-grid color-grid--4">
+          <div class="swatch swatch--small" onclick="copyHex(this, '#F6EFEB')">
+            <div class="swatch-color" style="background: #F6EFEB;">
+              <div class="swatch-copy-toast">Copiado!</div>
+            </div>
+            <div class="swatch-info">
+              <div class="swatch-name">Cobre Gelo</div>
+              <div class="swatch-hex">#F6EFEB</div>
+            </div>
+          </div>
+          <div class="swatch swatch--small" onclick="copyHex(this, '#F6EBEB')">
+            <div class="swatch-color" style="background: #F6EBEB;">
+              <div class="swatch-copy-toast">Copiado!</div>
+            </div>
+            <div class="swatch-info">
+              <div class="swatch-name">Rosa Gelo</div>
+              <div class="swatch-hex">#F6EBEB</div>
+            </div>
+          </div>
+          <div class="swatch swatch--small" onclick="copyHex(this, '#F6F4EB')">
+            <div class="swatch-color" style="background: #F6F4EB;">
+              <div class="swatch-copy-toast">Copiado!</div>
+            </div>
+            <div class="swatch-info">
+              <div class="swatch-name">Dourado Gelo</div>
+              <div class="swatch-hex">#F6F4EB</div>
+            </div>
+          </div>
+          <div class="swatch swatch--small" onclick="copyHex(this, '#EBF5F6')">
+            <div class="swatch-color" style="background: #EBF5F6;">
+              <div class="swatch-copy-toast">Copiado!</div>
+            </div>
+            <div class="swatch-info">
+              <div class="swatch-name">Ciano Gelo</div>
+              <div class="swatch-hex">#EBF5F6</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION: CORES NEUTRAS ═══ -->
+  <section id="neutras">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">3.6 &#8212; Cores Neutras</div>
+        <div class="section-title">A Estrutura Visual</div>
+        <div class="section-subtitle">Tons neutros baseados no cinza-neve e no rich-black solicitados, organizando o contraste de leitura da Atlas.</div>
+      </div>
+
+      <div class="color-grid color-grid--6 fade-in">
+        <div class="swatch swatch--small" onclick="copyHex(this, '#FFFFFF')">
+          <div class="swatch-color" style="background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08);">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Branco</div>
+            <div class="swatch-hex">#FFFFFF</div>
+          </div>
+        </div>
+        <div class="swatch swatch--small" onclick="copyHex(this, '#F2F2F2')">
+          <div class="swatch-color" style="background: #F2F2F2;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Cinza Neve</div>
+            <div class="swatch-hex">#F2F2F2</div>
+          </div>
+        </div>
+        <div class="swatch swatch--small" onclick="copyHex(this, '#E5E7EB')">
+          <div class="swatch-color" style="background: #E5E7EB;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Cinza Claro</div>
+            <div class="swatch-hex">#E5E7EB</div>
+          </div>
+        </div>
+        <div class="swatch swatch--small" onclick="copyHex(this, '#9CA3AF')">
+          <div class="swatch-color" style="background: #9CA3AF;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Cinza Médio</div>
+            <div class="swatch-hex">#9CA3AF</div>
+          </div>
+        </div>
+        <div class="swatch swatch--small" onclick="copyHex(this, '#6B7280')">
+          <div class="swatch-color" style="background: #6B7280;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Cinza Texto</div>
+            <div class="swatch-hex">#6B7280</div>
+          </div>
+        </div>
+        <div class="swatch swatch--small" onclick="copyHex(this, '#090A08')">
+          <div class="swatch-color" style="background: #090A08;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Rich Black</div>
+            <div class="swatch-hex">#090A08</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION: CORES SEMÂNTICAS ═══ -->
+  <section id="semanticas">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">3.7 &#8212; Cores Semânticas</div>
+        <div class="section-title">Status e Feedback</div>
+        <div class="section-subtitle">Respostas visuais claras do sistema. O tom verde de sucesso é derivado diretamente do input enviado.</div>
+      </div>
+
+      <div class="color-grid color-grid--4 fade-in">
+        <div class="swatch" onclick="copyHex(this, '#31912E')">
+          <div class="swatch-color" style="background: #31912E;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Sucesso (Green Active)</div>
+            <div class="swatch-hex">#31912E</div>
+            <div class="swatch-meta">Uptime operacional, deploys executados</div>
+          </div>
+        </div>
+        <div class="swatch" onclick="copyHex(this, '#EAF6EA')">
+          <div class="swatch-color" style="background: #EAF6EA;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Sucesso Light</div>
+            <div class="swatch-hex">#EAF6EA</div>
+            <div class="swatch-meta">Background de notificações bem-sucedidas</div>
+          </div>
+        </div>
+        <div class="swatch" onclick="copyHex(this, '#DC2626')">
+          <div class="swatch-color" style="background: #DC2626;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Erro (Falha)</div>
+            <div class="swatch-hex">#DC2626</div>
+            <div class="swatch-meta">Interrupção ou travamento de fluxos</div>
+          </div>
+        </div>
+        <div class="swatch" onclick="copyHex(this, '#FEE2E2')">
+          <div class="swatch-color" style="background: #FEE2E2;">
+            <div class="swatch-copy-toast">Copiado!</div>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Erro Light</div>
+            <div class="swatch-hex">#FEE2E2</div>
+            <div class="swatch-meta">Background de modais de exclusão</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION: GRADIENTES ═══ -->
+  <section id="gradientes">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">3.8 &#8212; Gradientes Corporativos</div>
+        <div class="section-title">Transições Dinâmicas</div>
+        <div class="section-subtitle">Projetados para headers institucionais, botões primários e ilustrações 3D da Atlas.</div>
+      </div>
+
+      <div class="gradient-grid fade-in">
+        <div class="gradient-card" onclick="copyText(this, 'linear-gradient(135deg, #2976A6, #1E567A)')">
+          <div class="gradient-strip" style="background: linear-gradient(135deg, #2976A6, #1E567A);"></div>
+          <div class="gradient-card-info">
+            <div class="gradient-card-name">Royal (Assinatura)</div>
+            <div class="gradient-card-css">linear-gradient(135deg, #2976A6, #1E567A)</div>
+            <div class="gradient-card-use">CTAs e botões primários</div>
+          </div>
+        </div>
+        <div class="gradient-card" onclick="copyText(this, 'linear-gradient(135deg, #101C40, #0C1530)')">
+          <div class="gradient-strip" style="background: linear-gradient(135deg, #101C40, #0C1530);"></div>
+          <div class="gradient-card-info">
+            <div class="gradient-card-name">Fire (Fundo Corporativo)</div>
+            <div class="gradient-card-css">linear-gradient(135deg, #101C40, #0C1530)</div>
+            <div class="gradient-card-use">Painéis e modais escuros de segurança</div>
+          </div>
+        </div>
+        <div class="gradient-card" onclick="copyText(this, 'linear-gradient(135deg, #2976A6, #72A2C4, #101C40)')">
+          <div class="gradient-strip" style="background: linear-gradient(135deg, #2976A6, #72A2C4, #101C40);"></div>
+          <div class="gradient-card-info">
+            <div class="gradient-card-name">Duo (Ilustrativo)</div>
+            <div class="gradient-card-css">linear-gradient(135deg, #2976A6, #72A2C4, #101C40)</div>
+            <div class="gradient-card-use">Gráficos editoriais e ilustrações de agentes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION: TYPOGRAPHY ═══ -->
+  <section id="tipografia">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">4.0 &#8212; Tipografia</div>
+        <div class="section-title">Tipografia e Escala Tipográfica</div>
+        <div class="section-subtitle">A tipografia expressa a precisão técnica da Atlas através de fontes geométricas e monoespaçadas.</div>
+      </div>
+
+      <div class="type-showcase fade-in">
+        <div class="type-family">
+          <div class="type-family-label">Display (Headings)</div>
+          <div class="type-specimen-display">Manrope</div>
+          <div class="type-name">Manrope Bold</div>
+          <div class="type-weights">Pesos suportados: 600 (Semibold) &#183; 700 (Bold) &#183; 800 (ExtraBold)</div>
+        </div>
+        <div class="type-family">
+          <div class="type-family-label">Body (Interface / Texto)</div>
+          <div class="type-specimen-body">Plus Jakarta</div>
+          <div class="type-name">Plus Jakarta Sans Regular</div>
+          <div class="type-weights">Pesos suportados: 400 (Regular) &#183; 500 (Medium) &#183; 600 (Semibold)</div>
+        </div>
+      </div>
+
+      <div class="type-scale fade-in">
+        <div class="type-scale-row">
+          <span class="type-scale-token">--font-size-3xl</span>
+          <span class="type-scale-sample" style="font-family: var(--font-display); font-weight:800; font-size: 2.75rem;">Menos manual. Mais tempo.</span>
+          <span class="type-scale-size">2.75rem (44px)</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="type-scale-token">--font-size-2xl</span>
+          <span class="type-scale-sample" style="font-family: var(--font-display); font-weight:700; font-size: 2rem;">Automação de Processos</span>
+          <span class="type-scale-size">2.00rem (32px)</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="type-scale-token">--font-size-lg</span>
+          <span class="type-scale-sample" style="font-family: var(--font-display); font-weight:600; font-size: 1.25rem;">Resultados em tempo real</span>
+          <span class="type-scale-size">1.25rem (20px)</span>
+        </div>
+        <div class="type-scale-row">
+          <span class="type-scale-token">--font-size-base</span>
+          <span class="type-scale-sample" style="font-family: var(--font-body); font-weight:400; font-size: 1rem;">O texto corrido da interface deve ser legível e fluido.</span>
+          <span class="type-scale-size">1.00rem (16px)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION: ACCESSIBILITY ═══ -->
+  <section id="acessibilidade">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">3.9 &#8212; Acessibilidade WCAG 2.1 AA</div>
+        <div class="section-title">Contraste Regulatório</div>
+        <div class="section-subtitle">Verificação rigorosa de legibilidade de acordo com as especificações nível AA.</div>
+      </div>
+
+      <table class="access-table fade-in">
+        <thead>
+          <tr>
+            <th>Combinação</th>
+            <th>Texto Preview</th>
+            <th>Taxa de Contraste</th>
+            <th>Status WCAG 2.1 AA</th>
+            <th>Uso Indicado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Branco sobre Deep Navy</td>
+            <td><div class="access-preview" style="background:#101C40; color:#FFFFFF;">Aa</div></td>
+            <td><strong>13.5:1</strong></td>
+            <td><span class="access-chip access-chip--pass">Passa AA</span></td>
+            <td>Texto padrão de leitura e botões escuros</td>
+          </tr>
+          <tr>
+            <td>Branco sobre Steel Blue</td>
+            <td><div class="access-preview" style="background:#2976A6; color:#FFFFFF;">Aa</div></td>
+            <td><strong>3.8:1</strong></td>
+            <td><span class="access-chip access-chip--fail">Apenas Grande</span></td>
+            <td>Apenas títulos maiores de 18px ou bold</td>
+          </tr>
+          <tr>
+            <td>Branco sobre Steel Blue Dark</td>
+            <td><div class="access-preview" style="background:#1E567A; color:#FFFFFF;">Aa</div></td>
+            <td><strong>6.1:1</strong></td>
+            <td><span class="access-chip access-chip--pass">Passa AA</span></td>
+            <td>Botões de Call-to-Action primários</td>
+          </tr>
+          <tr>
+            <td>Rich Black sobre Cinza Neve</td>
+            <td><div class="access-preview" style="background:#F2F2F2; color:#090A08;">Aa</div></td>
+            <td><strong>15.8:1</strong></td>
+            <td><span class="access-chip access-chip--pass">Passa AA</span></td>
+            <td>Tabelas de dados e relatórios claros</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION: COMBINATIONS ═══ -->
+  <section id="combinacoes">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">11.1 &#8212; Combinações de Interface</div>
+        <div class="section-title">Combinações Aprovadas</div>
+        <div class="section-subtitle">Exemplos visuais de pares de cores aprovados para estruturas de layout.</div>
+      </div>
+
+      <div class="combo-grid fade-in">
+        <div class="combo-card">
+          <div class="combo-preview" style="background: #090A08; color: #FFFFFF;">Texto Branco</div>
+          <div class="combo-label">Fundo: Rich Black (#090A08)<br>Contraste extremo</div>
+        </div>
+        <div class="combo-card">
+          <div class="combo-preview" style="background: #101C40; color: #FFFFFF;">Painel Navy</div>
+          <div class="combo-label">Fundo: Deep Navy (#101C40)<br>Legibilidade perfeita</div>
+        </div>
+        <div class="combo-card">
+          <div class="combo-preview" style="background: #EBF2F6; color: #090A08;">Alerta Info</div>
+          <div class="combo-label">Fundo: Steel Ice (#EBF2F6)<br>Alerta claro</div>
+        </div>
+        <div class="combo-card">
+          <div class="combo-preview" style="background: #1E567A; color: #FFFFFF;">Botão Ativo</div>
+          <div class="combo-label">Fundo: Steel Dark (#1E567A)<br>Botão primário</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION: SPACING & SHADOWS ═══ -->
+  <section id="espacamentos">
+    <div class="container">
+      <div class="subsection fade-in">
+        <div class="section-label">5.1 &#8212; Espaçamento Modular</div>
+        <div class="subsection-title">Espaçamento Base 4px</div>
+        <div class="subsection-desc">Garante consistência rítmica e alinhamentos alinhados ao grid modular.</div>
+        <div class="spacing-grid">
+          <div class="spacing-row">
+            <span class="spacing-token">--space-xs</span>
+            <div class="spacing-bar-wrap"><div class="spacing-bar" style="width: 8%"></div></div>
+            <span class="spacing-value">8px (0.5rem)</span>
+          </div>
+          <div class="spacing-row">
+            <span class="spacing-token">--space-sm</span>
+            <div class="spacing-bar-wrap"><div class="spacing-bar" style="width: 16%"></div></div>
+            <span class="spacing-value">16px (1.0rem)</span>
+          </div>
+          <div class="spacing-row">
+            <span class="spacing-token">--space-md</span>
+            <div class="spacing-bar-wrap"><div class="spacing-bar" style="width: 24%"></div></div>
+            <span class="spacing-value">24px (1.5rem)</span>
+          </div>
+          <div class="spacing-row">
+            <span class="spacing-token">--space-lg</span>
+            <div class="spacing-bar-wrap"><div class="spacing-bar" style="width: 40%"></div></div>
+            <span class="spacing-value">40px (2.5rem)</span>
+          </div>
+          <div class="spacing-row">
+            <span class="spacing-token">--space-xl</span>
+            <div class="spacing-bar-wrap"><div class="spacing-bar" style="width: 80%"></div></div>
+            <span class="spacing-value">80px (5.0rem)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsection mt-2 fade-in">
+        <div class="section-label">6.2 &#8212; Elevações</div>
+        <div class="subsection-title">Sombras e Profundidade</div>
+        <div class="subsection-desc">Define a profundidade dos elementos flutuantes sobre a base Rich Black.</div>
+        <div class="shadow-grid">
+          <div class="shadow-card" style="box-shadow: var(--shadow-sm);">
+            <span class="shadow-card-label">--shadow-sm</span>
+          </div>
+          <div class="shadow-card" style="box-shadow: var(--shadow-md);">
+            <span class="shadow-card-label">--shadow-md</span>
+          </div>
+          <div class="shadow-card" style="box-shadow: var(--shadow-lg);">
+            <span class="shadow-card-label">--shadow-lg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION: CSS TOKENS ═══ -->
+  <section id="tokens">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">10.0 &#8212; Design Tokens</div>
+        <div class="section-title">Design Tokens CSS</div>
+        <div class="section-subtitle">Copie e cole as variáveis no arquivo central de CSS da aplicação Atlas.</div>
+      </div>
+
+      <div class="code-block fade-in">
+        <div class="code-header">
+          <div class="code-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="code-filename">variables.css</div>
+          <button class="code-copy-btn" onclick="copyTokens(this)">Copiar Tudo</button>
+        </div>
+        <div class="code-body">
+          <pre id="cssTokens"><span class="selector">:root</span> <span class="bracket">{</span>
+
+  <span class="comment">/* ═══ Cores Primárias ═══ */</span>
+  <span class="prop">--color-steel-blue</span>:         <span class="val">#2976A6</span>;
+  <span class="prop">--color-deep-navy</span>:          <span class="val">#101C40</span>;
+
+  <span class="comment">/* ═══ Cores Secundárias ═══ */</span>
+  <span class="prop">--color-steel-dark</span>:         <span class="val">#1E567A</span>;
+  <span class="prop">--color-steel-medium</span>:       <span class="val">#72A2C4</span>;
+  <span class="prop">--color-navy-warm</span>:          <span class="val">#1B2F6C</span>;
+  <span class="prop">--color-navy-dark</span>:          <span class="val">#0C1530</span>;
+
+  <span class="comment">/* ═══ Tints & Shades ═══ */</span>
+  <span class="prop">--color-steel-ice</span>:          <span class="val">#EBF2F6</span>;
+  <span class="prop">--color-steel-mist</span>:         <span class="val">#D6E4EE</span>;
+  <span class="prop">--color-navy-light</span>:         <span class="val">#EDF0FA</span>;
+  <span class="prop">--color-navy-soft</span>:          <span class="val">#D1DAF2</span>;
+
+  <span class="comment">/* ═══ Complementares e Derivadas ═══ */</span>
+  <span class="prop">--color-terracota</span>:          <span class="val">#A65929</span>;
+  <span class="prop">--color-terracota-gelo</span>:     <span class="val">#F6EFEB</span>;
+  <span class="prop">--color-vermelho-alerta</span>:    <span class="val">#A62929</span>;
+  <span class="prop">--color-ouro-envelhecido</span>:   <span class="val">#A68029</span>;
+  <span class="prop">--color-ametista</span>:           <span class="val">#A6297E</span>;
+  <span class="prop">--color-ciano-glaciar</span>:      <span class="val">#299AA6</span>;
+  <span class="prop">--color-ciano-gelo</span>:         <span class="val">#EBF5F6</span>;
+
+  <span class="comment">/* ═══ Neutras ═══ */</span>
+  <span class="prop">--color-white</span>:              <span class="val">#FFFFFF</span>;
+  <span class="prop">--color-snow</span>:               <span class="val">#F2F2F2</span>;
+  <span class="prop">--color-gray-light</span>:         <span class="val">#E5E7EB</span>;
+  <span class="prop">--color-gray-medium</span>:        <span class="val">#9CA3AF</span>;
+  <span class="prop">--color-gray-text</span>:          <span class="val">#6B7280</span>;
+  <span class="prop">--color-dark</span>:               <span class="val">#090A08</span>;
+
+  <span class="comment">/* ═══ Semânticas ═══ */</span>
+  <span class="prop">--color-success</span>:            <span class="val">#31912E</span>;
+  <span class="prop">--color-success-light</span>:      <span class="val">#EAF6EA</span>;
+  <span class="prop">--color-warning</span>:            <span class="val">#D97706</span>;
+  <span class="prop">--color-error</span>:              <span class="val">#DC2626</span>;
+  <span class="prop">--color-info</span>:               <span class="val">#2976A6</span>;
+
+  <span class="comment">/* ═══ Gradientes ═══ */</span>
+  <span class="prop">--gradient-royal</span>:           <span class="val">linear-gradient(135deg, #2976A6, #1E567A)</span>;
+  <span class="prop">--gradient-fire</span>:            <span class="val">linear-gradient(135deg, #101C40, #0C1530)</span>;
+  <span class="prop">--gradient-sunrise</span>:         <span class="val">linear-gradient(135deg, #101C40, #1B2F6C, #D1DAF2)</span>;
+
+  <span class="comment">/* ═══ Tipografia ═══ */</span>
+  <span class="prop">--font-display</span>:             <span class="val">'Manrope', sans-serif</span>;
+  <span class="prop">--font-body</span>:                <span class="val">'Plus Jakarta Sans', sans-serif</span>;
+  <span class="prop">--font-mono</span>:                <span class="val">'JetBrains Mono', monospace</span>;
+
+  <span class="comment">/* ═══ Espaçamento ═══ */</span>
+  <span class="prop">--space-xs</span>:                 <span class="val">0.5rem</span>;
+  <span class="prop">--space-sm</span>:                 <span class="val">1rem</span>;
+  <span class="prop">--space-md</span>:                 <span class="val">1.5rem</span>;
+  <span class="prop">--space-lg</span>:                 <span class="val">2.5rem</span>;
+  <span class="prop">--space-xl</span>:                 <span class="val">5rem</span>;
+
+  <span class="comment">/* ═══ Arredondamento ═══ */</span>
+  <span class="prop">--radius-sm</span>:                <span class="val">8px</span>;
+  <span class="prop">--radius-md</span>:                <span class="val">12px</span>;
+  <span class="prop">--radius-lg</span>:                <span class="val">16px</span>;
+  <span class="prop">--radius-pill</span>:              <span class="val">999px</span>;
+
+  <span class="comment">/* ═══ Sombras ═══ */</span>
+  <span class="prop">--shadow-sm</span>:                <span class="val">0 2px 8px rgba(9, 10, 8, 0.2)</span>;
+  <span class="prop">--shadow-md</span>:                <span class="val">0 8px 24px rgba(9, 10, 8, 0.35)</span>;
+  <span class="prop">--shadow-lg</span>:                <span class="val">0 16px 48px rgba(9, 10, 8, 0.5)</span>;
+
+<span class="bracket">}</span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION: GUIA RÁPIDO ═══ -->
+  <section id="guia-rapido" style="background: var(--color-white);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">11 &#8212; Guia Rápido (Cheat Sheet)</div>
+        <div class="section-title">Tabela de Consulta Rápida</div>
+        <div class="section-subtitle">Tabela unificada com todas as cores do sistema (Primárias, Complementares, Neutras e Semânticas) para facilitar a cópia e o desenvolvimento estruturado.</div>
+      </div>
+
+      <div class="fade-in">
+        <table class="guide-table">
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th style="width: 60px; text-align: center;">Cor</th>
+              <th>Nome Técnico</th>
+              <th>Hexadecimal</th>
+              <th>RGB</th>
+              <th>HSL</th>
+              <th style="text-align: right;">Copiar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Primária</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #2976A6; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Steel Blue</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#2976A6</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">41, 118, 166</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">203&deg;, 60%, 41%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#2976A6')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Primária</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #101C40; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Deep Navy</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#101C40</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">16, 28, 64</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">225&deg;, 60%, 16%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#101C40')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Variação</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #1E567A; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Steel Dark</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#1E567A</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">30, 86, 122</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">203&deg;, 61%, 30%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#1E567A')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Variação</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #72A2C4; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Steel Medium</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#72A2C4</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">114, 162, 196</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">205&deg;, 41%, 61%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#72A2C4')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Variação</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #1B2F6C; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Navy Warm</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#1B2F6C</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">27, 47, 108</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">225&deg;, 60%, 26%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#1B2F6C')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Variação</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #0C1530; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Navy Dark</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#0C1530</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">12, 21, 48</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">225&deg;, 60%, 12%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#0C1530')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Tints</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #EBF2F6; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Steel Ice</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#EBF2F6</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">235, 242, 246</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">202&deg;, 38%, 94%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#EBF2F6')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Tints</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #D6E4EE; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Steel Mist</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#D6E4EE</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">214, 228, 238</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">205&deg;, 41%, 89%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#D6E4EE')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Tints</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #EDF0FA; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Navy Light</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#EDF0FA</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">237, 240, 250</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">226&deg;, 57%, 95%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#EDF0FA')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Tints</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #D1DAF2; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Navy Soft</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#D1DAF2</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">209, 218, 242</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">224&deg;, 56%, 88%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#D1DAF2')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Complementar</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #A65929; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Terracota</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#A65929</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">166, 89, 41</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">23&deg;, 60%, 41%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#A65929')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Complementar</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #F6EFEB; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Terracota Gelo</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#F6EFEB</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">246, 239, 235</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">22&deg;, 38%, 94%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#F6EFEB')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Complementar</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #A62929; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Vermelho Alerta</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#A62929</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">166, 41, 41</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">0&deg;, 60%, 41%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#A62929')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Complementar</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #A68029; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Ouro Envelhecido</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#A68029</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">166, 128, 41</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">42&deg;, 60%, 41%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#A68029')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Complementar</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #A6297E; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Ametista</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#A6297E</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">166, 41, 126</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">319&deg;, 60%, 41%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#A6297E')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Complementar</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #299AA6; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Ciano Glaciar</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#299AA6</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">41, 154, 166</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">186&deg;, 60%, 41%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#299AA6')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Complementar</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #EBF5F6; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Ciano Gelo</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#EBF5F6</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">235, 245, 246</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">185&deg;, 38%, 94%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#EBF5F6')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Neutra</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #FFFFFF; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Branco Puro</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#FFFFFF</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">255, 255, 255</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">0&deg;, 0%, 100%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#FFFFFF')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Neutra</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #F2F2F2; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Cinza Neve</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#F2F2F2</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">242, 242, 242</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">0&deg;, 0%, 95%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#F2F2F2')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Neutra</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #E5E7EB; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Cinza Claro</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#E5E7EB</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">229, 231, 235</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">220&deg;, 13%, 91%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#E5E7EB')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Neutra</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #9CA3AF; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Cinza Médio</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#9CA3AF</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">156, 163, 175</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">218&deg;, 11%, 65%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#9CA3AF')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Neutra</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #6B7280; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Cinza Texto</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#6B7280</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">107, 114, 128</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">220&deg;, 9%, 46%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#6B7280')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Neutra</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #090A08; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Rich Black</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#090A08</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">9, 10, 8</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">90&deg;, 11%, 4%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#090A08')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Semântica</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #31912E; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Sucesso</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#31912E</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">49, 145, 46</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">118&deg;, 52%, 37%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#31912E')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Semântica</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #EAF6EA; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Sucesso Light</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#EAF6EA</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">234, 246, 234</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">120&deg;, 40%, 94%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#EAF6EA')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Semântica</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #D97706; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Alerta (Warning)</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#D97706</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">217, 119, 6</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">32&deg;, 95%, 44%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#D97706')">Copiar</button>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 0.8rem; color: var(--color-gray-text);">Semântica</td>
+              <td style="text-align: center;"><span class="color-dot" style="background: #DC2626; border: 1px solid rgba(0,0,0,0.1);"></span></td>
+              <td><strong>Erro (Error)</strong></td>
+              <td style="font-family: var(--font-mono); color: var(--color-primary);">#DC2626</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">220, 38, 38</td>
+              <td style="font-family: var(--font-mono); font-size: 0.75rem;">0&deg;, 72%, 51%</td>
+              <td style="text-align: right;">
+                <button class="code-copy-btn" style="color: var(--color-dark); border-color: rgba(0,0,0,0.1); background: transparent;" onclick="copyText(this, '#DC2626')">Copiar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="icon">&#9670;</span> Atlas Opção B</div>
+      <p>Guia alternativo de identidade visual para votação.<br>Menos trabalho manual. Mais tempo para crescer.</p>
+      <hr class="footer-line">
+      <div class="footer-copy">Atlas &#8212; Gestão e Tecnologia &mdash; Versão B 1.0 &mdash; 2026-06-05</div>
+    </div>
+  </footer>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script>
+    /* ── Copy to clipboard ── */
+    function copyHex(el, hex) {
+      navigator.clipboard.writeText(hex).then(function() {
+        el.classList.add('copied');
+        setTimeout(function() { el.classList.remove('copied'); }, 1200);
+      });
+    }
+
+    function copyText(el, text) {
+      navigator.clipboard.writeText(text).then(function() {
+        var info = el.querySelector('.gradient-card-name') || el;
+        var orig = info.textContent;
+        info.textContent = 'Copiado!';
+        setTimeout(function() { info.textContent = orig; }, 1200);
+      });
+    }
+
+    function copyTokens(btn) {
+      var pre = document.getElementById('cssTokens');
+      var text = pre.textContent || pre.innerText;
+      navigator.clipboard.writeText(text).then(function() {
+        var orig = btn.textContent;
+        btn.textContent = 'Copiado!';
+        btn.style.color = '#27C93F';
+        setTimeout(function() {
+          btn.textContent = orig;
+          btn.style.color = '';
+        }, 2000);
+      });
+    }
+
+    /* ── Scroll spy & nav shadow ── */
+    var nav = document.getElementById('nav');
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.nav-links a');
+
+    function onScroll() {
+      var scrollY = window.scrollY;
+
+      // Nav shadow
+      if (scrollY > 10) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+
+      // Active link
+      var current = '';
+      sections.forEach(function(section) {
+        var top = section.offsetTop - 120;
+        if (scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(function(link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    /* ── Intersection Observer for fade-in ── */
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
