@@ -201,44 +201,43 @@
         <!-- O Desafio -->
         <div class="section-block">
           <h3>O Desafio</h3>
-          <p>O portal Jovem Aprendiz Brasil operava originalmente sob a plataforma WordPress, sofrendo com tempos elevados de carregamento, consumo de servidor ineficiente frente a picos de tráfego, instabilidades de plugins de terceiros e limitações severas na exibição de blocos do Google AdSense em resoluções mobile.</p>
-          <p>Adicionalmente, o processo de curadoria de vagas era executado de forma manual, exigindo horas de trabalho diário da equipe para filtrar, catalogar e publicar novas vagas contendo o termo "jovem aprendiz".</p>
+          <p>O portal Jovem Aprendiz Brasil operava originalmente em WordPress e sofria com lentidão no carregamento, instabilidades constantes e quedas do servidor nos momentos de pico de acessos. Além disso, as limitações do sistema antigo prejudicavam a correta exibição e a receita de anúncios, que são a principal fonte de faturamento do portal.</p>
+          <p>Outro grande gargalo era a curadoria de vagas: a seleção, validação e publicação de oportunidades de trabalho eram feitas de forma 100% manual, exigindo horas diárias de trabalho repetitivo da equipe interna.</p>
         </div>
 
         <!-- A Solução -->
         <div class="section-block">
           <h3>A Solução</h3>
-          <p>A Atlas desenvolveu e implantou uma arquitetura robusta dividida em 3 camadas de alto desempenho (P.D.S. — Produto, Dados e Serviços):</p>
-          <p><strong>1. Produto (Frontend):</strong> Uma aplicação SPA (Single Page Application) construída em Vite + React (TypeScript) com CSS Vanilla. O portal de vagas foi reestruturado em uma grade dinâmica de 3 colunas e as rotas virtuais de navegação foram sincronizadas com o histórico do navegador (HTML5 History API via pushState), permitindo ao Google AdSense registrar transições de página no app e acionar anúncios de vinheta (interstitiais de tela cheia) de forma automatizada e orgânica.</p>
-          <p><strong>2. Dados (Supabase & Cache):</strong> Banco de dados relacional em PostgreSQL hospedado no Supabase integrado com rotinas locais de sincronização rápida, provendo carregamento offline em frações de segundos.</p>
-          <p><strong>3. Serviços (n8n & Inteligência Artificial):</strong> Criamos rotinas automatizadas no n8n para raspagem de vagas no ecossistema Gupy e outras fontes. O robô inclui um <strong>Agente Redator de IA (Google Gemini 1.5 Flash)</strong> que reescreve a introdução e textos sobre a empresa de forma 100% original antes de salvar as vagas, blindando o site contra punições de conteúdo duplicado do AdSense e alavancando a indexação orgânica de buscas (SEO).</p>
+          <p>A Atlas desenvolveu e implantou uma arquitetura sob medida focada em máxima velocidade, automação de processos e eficiência operacional:</p>
+          <p><strong>1. Velocidade e Monetização (Frontend):</strong> Criamos um portal moderno do zero, com carregamento instantâneo de páginas. Estruturamos o site para exibir anúncios de forma dinâmica e automatizada, melhorando a experiência do visitante e otimizando os ganhos com publicidade de forma totalmente orgânica.</p>
+          <p><strong>2. Infraestrutura em Nuvem (Banco de Dados):</strong> Migramos toda a base de dados do portal para uma nuvem rápida e segura (Supabase/PostgreSQL), garantindo que o site carregue as oportunidades em frações de segundos e permaneça estável sob qualquer pico de tráfego.</p>
+          <p><strong>3. Robôs de Busca e IA (Automação):</strong> Desenvolvemos fluxos automatizados (com n8n) para capturar vagas de diversas fontes oficiais na internet. Integramos um **Agente Redator de Inteligência Artificial (Google Gemini)** para reescrever e otimizar os textos das vagas automaticamente. Isso garantiu conteúdos únicos e originais, blindando o portal contra punições do Google e melhorando drasticamente o ranqueamento de buscas (SEO).</p>
           <div class="tech-tags">
             <!-- Tags das Tecnologias Aplicadas -->
-            <span class="tech-tag">Vite & React (TS)</span>
-            <span class="tech-tag">Supabase / PostgreSQL</span>
-            <span class="tech-tag">n8n Workflow Automation</span>
-            <span class="tech-tag">Google Gemini 1.5 API</span>
-            <span class="tech-tag">HTML5 History API (pushState)</span>
-            <span class="tech-tag">Nginx Premium Hosting</span>
+            <span class="tech-tag">Design SPA Ultraveloz</span>
+            <span class="tech-tag">Automação de Processos (n8n)</span>
+            <span class="tech-tag">Inteligência Artificial (Gemini)</span>
+            <span class="tech-tag">Banco de Dados em Nuvem (Supabase)</span>
+            <span class="tech-tag">Otimização de SEO e AdSense</span>
           </div>
         </div>
 
         <!-- Resultados -->
         <div class="section-block">
-          <h3>Resultados Operacionais</h3>
-          <p>A intervenção técnica garantiu segurança contra quedas de tráfego, economia de custos operacionais e aumento imediato do potencial de monetização do portal.</p>
+          <h3>Resultados de Impacto</h3>
+          <p>A modernização e automação do portal gerou estabilidade de tráfego absoluta, economia imediata de tempo operacional e maximização da receita por visitante:</p>
           <div class="results-grid">
             <div class="result-card">
               <div class="value">&lt; 1.0s</div>
-              <div class="label">Carregamento Inicial</div>
+              <div class="label">Tempo de Carregamento Inicial</div>
             </div>
             <div class="result-card">
               <div class="value">90%</div>
-              <div class="label">Automação de Curadoria</div>
+              <div class="label">Redução do Trabalho Manual</div>
             </div>
             <div class="result-card">
               <div class="value">100%</div>
-              <div class="label">Originalidade (AdSense/SEO)</div>
+              <div class="label">Conteúdo Único Livre de Punição</div>
             </div>
           </div>
         </div>
