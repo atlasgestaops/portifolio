@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jovem Aprendiz Brasil – Estudo de Caso | Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07090E;
+      --surface: #0E131F;
+      --surface2: #161F33;
+      --border: rgba(255, 255, 255, 0.06);
+      --accent: #2976A6;
+      --accent2: #1E567A;
+      --text: #F2F2F2;
+      --muted: #8FAEC4;
+      --white: #FFFFFF;
+      --radius: 24px;
+      --grad: linear-gradient(135deg, #2976A6 0%, #1E567A 100%);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+      background: var(--bg);
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.3;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; line-height: 1.2; color: var(--white); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 0;
+      background: rgba(7, 9, 14, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .inner { display: flex; justify-content: space-between; align-items: center; }
+    .nav-back { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .nav-back:hover { color: var(--white); }
+    .logo { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 1.25rem; letter-spacing: -0.03em; color: var(--white); text-decoration: none; }
+    .logo span { color: var(--accent); }
+
+    /* HERO */
+    .hero { padding: 140px 0 60px; text-align: center; position: relative; }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(41, 118, 166, 0.08) 0%, transparent 70%);
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none; filter: blur(80px);
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(41, 118, 166, 0.1);
+      border: 1px solid rgba(41, 118, 166, 0.25);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 0.75rem; font-weight: 700; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 0.05em;
+      margin-bottom: 24px;
+    }
+    .hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0.03em; max-width: 800px; margin: 0 auto 20px; }
+    .hero p { font-size: 1.1rem; color: var(--muted); max-width: 600px; margin: 0 auto 36px; }
+
+    /* VISUAL WRAP */
+    .mockup-container {
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 12px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+      margin-bottom: 80px;
+      overflow: hidden;
+    }
+    .mockup-img { width: 100%; height: auto; border-radius: calc(var(--radius) - 12px); display: block; border: 1px solid rgba(255, 255, 255, 0.05); }
+
+    /* DETAILS GRID */
+    .grid-info { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; margin-bottom: 80px; }
+    @media (max-width: 768px) { .grid-info { grid-template-columns: 1fr; gap: 32px; } }
+
+    .sidebar { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; height: fit-content; position: sticky; top: 100px; }
+    .sidebar-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+    .meta-list { display: flex; flex-direction: column; gap: 18px; }
+    .meta-item h5 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 4px; }
+    .meta-item p { font-size: 0.95rem; font-weight: 600; color: var(--white); }
+
+    .btn-visit {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--grad); color: var(--white); text-decoration: none;
+      padding: 14px 24px; border-radius: 12px; font-weight: 700; font-size: 0.95rem;
+      width: 100%; margin-top: 24px; transition: opacity 0.2s, transform 0.2s;
+      box-shadow: 0 4px 20px rgba(41, 118, 166, 0.2);
+    }
+    .btn-visit:hover { opacity: 0.9; transform: translateY(-2px); }
+
+    /* CONTENT BODY */
+    .content-body { display: flex; flex-direction: column; gap: 48px; }
+    .section-block h3 { font-size: 1.6rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .section-block h3::before { content: ''; display: inline-block; width: 6px; height: 24px; background: var(--accent); border-radius: 4px; }
+    .section-block p { font-size: 1.05rem; color: var(--muted); margin-bottom: 16px; }
+
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .tech-tag { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 6px 14px; font-size: 0.85rem; font-weight: 600; color: var(--white); }
+
+    .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+    @media (max-width: 576px) { .results-grid { grid-template-columns: 1fr; } }
+    .result-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; text-align: center; }
+    .result-card .value { font-size: 2.2rem; font-weight: 800; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
+    .result-card .label { font-size: 0.85rem; color: var(--muted); }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; margin-top: 100px; }
+    footer p { font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav>
+    <div class="container inner">
+      <a href="../index.html" class="nav-back">← Voltar ao Portfólio</a>
+      <a href="../index.html" class="logo">Atlas<span>.</span></a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <span class="badge">🌐 Desenvolvimento Web & Automação</span>
+      <h1>Jovem Aprendiz Brasil</h1>
+      <p>Um portal SPA de alta performance integrado com agentes de IA e múltiplos formatos de monetização inteligente com Google AdSense.</p>
+      
+      <!-- Mockup do print de tela real -->
+      <div class="mockup-container">
+        <img src="../assets/jab_mockup.png" alt="Mockup JAB" class="mockup-img">
+      </div>
+    </div>
+  </header>
+
+  <!-- SEÇÃO DE INFORMAÇÕES TÉCNICAS -->
+  <section class="container">
+    <div class="grid-info">
+      <!-- Ficha Técnica -->
+      <aside class="sidebar">
+        <h4 class="sidebar-title">Ficha Técnica</h4>
+        <div class="meta-list">
+          <div class="meta-item">
+            <h5>Cliente</h5>
+            <p>Jovem Aprendiz Brasil</p>
+          </div>
+          <div class="meta-item">
+            <h5>Serviço</h5>
+            <p>Automações de IA, SPA & Monetização</p>
+          </div>
+          <div class="meta-item">
+            <h5>Status</h5>
+            <p>Publicado</p>
+          </div>
+          <div class="meta-item">
+            <h5>Ano</h5>
+            <p>2026</p>
+          </div>
+        </div>
+        <!-- Link de destino original -->
+        <a href="https://jab.atlasbot.tech" target="_blank" rel="noopener noreferrer" class="btn-visit">
+          Visitar Site Oficial ↗
+        </a>
+      </aside>
+
+      <!-- Conteúdo Resumo Técnico -->
+      <main class="content-body">
+        <!-- O Desafio -->
+        <div class="section-block">
+          <h3>O Desafio</h3>
+          <p>O portal Jovem Aprendiz Brasil operava originalmente sob a plataforma WordPress, sofrendo com tempos elevados de carregamento, consumo de servidor ineficiente frente a picos de tráfego, instabilidades de plugins de terceiros e limitações severas na exibição de blocos do Google AdSense em resoluções mobile.</p>
+          <p>Adicionalmente, o processo de curadoria de vagas era executado de forma manual, exigindo horas de trabalho diário da equipe para filtrar, catalogar e publicar novas vagas contendo o termo "jovem aprendiz".</p>
+        </div>
+
+        <!-- A Solução -->
+        <div class="section-block">
+          <h3>A Solução</h3>
+          <p>A Atlas desenvolveu e implantou uma arquitetura robusta dividida em 3 camadas de alto desempenho (P.D.S. — Produto, Dados e Serviços):</p>
+          <p><strong>1. Produto (Frontend):</strong> Uma aplicação SPA (Single Page Application) construída em Vite + React (TypeScript) com CSS Vanilla. O portal de vagas foi reestruturado em uma grade dinâmica de 3 colunas e as rotas virtuais de navegação foram sincronizadas com o histórico do navegador (HTML5 History API via pushState), permitindo ao Google AdSense registrar transições de página no app e acionar anúncios de vinheta (interstitiais de tela cheia) de forma automatizada e orgânica.</p>
+          <p><strong>2. Dados (Supabase & Cache):</strong> Banco de dados relacional em PostgreSQL hospedado no Supabase integrado com rotinas locais de sincronização rápida, provendo carregamento offline em frações de segundos.</p>
+          <p><strong>3. Serviços (n8n & Inteligência Artificial):</strong> Criamos rotinas automatizadas no n8n para raspagem de vagas no ecossistema Gupy e outras fontes. O robô inclui um <strong>Agente Redator de IA (Google Gemini 1.5 Flash)</strong> que reescreve a introdução e textos sobre a empresa de forma 100% original antes de salvar as vagas, blindando o site contra punições de conteúdo duplicado do AdSense e alavancando a indexação orgânica de buscas (SEO).</p>
+          <div class="tech-tags">
+            <!-- Tags das Tecnologias Aplicadas -->
+            <span class="tech-tag">Vite & React (TS)</span>
+            <span class="tech-tag">Supabase / PostgreSQL</span>
+            <span class="tech-tag">n8n Workflow Automation</span>
+            <span class="tech-tag">Google Gemini 1.5 API</span>
+            <span class="tech-tag">HTML5 History API (pushState)</span>
+            <span class="tech-tag">Nginx Premium Hosting</span>
+          </div>
+        </div>
+
+        <!-- Resultados -->
+        <div class="section-block">
+          <h3>Resultados Operacionais</h3>
+          <p>A intervenção técnica garantiu segurança contra quedas de tráfego, economia de custos operacionais e aumento imediato do potencial de monetização do portal.</p>
+          <div class="results-grid">
+            <div class="result-card">
+              <div class="value">&lt; 1.0s</div>
+              <div class="label">Carregamento Inicial</div>
+            </div>
+            <div class="result-card">
+              <div class="value">90%</div>
+              <div class="label">Automação de Curadoria</div>
+            </div>
+            <div class="result-card">
+              <div class="value">100%</div>
+              <div class="label">Originalidade (AdSense/SEO)</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2026 - Desenvolvido e Hospedado pela Atlas OPS.</p>
+    </div>
+  </footer>
+</body>
+</html>
