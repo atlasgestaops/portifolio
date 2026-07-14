@@ -586,11 +586,12 @@
         <button class="filter-tab" onclick="filterPortfolio('automacao')">⚙️ Automação de Processos</button>
         <button class="filter-tab" onclick="filterPortfolio('ia')">🤖 Atendimento & IA</button>
         <button class="filter-tab" onclick="filterPortfolio('integracoes')">🔗 Integrações</button>
+        <button class="filter-tab" onclick="filterPortfolio('crm')">📊 CRM & Vendas</button>
       </div>
 
       <div class="portfolio-grid">
         <!-- Item: Sorveteria Kizar -->
-        <div class="portfolio-item reveal" data-category="web">
+        <div class="portfolio-item reveal" data-category="web ia automacao">
           <div class="portfolio-img-wrap">
             <img src="assets/kizar_mockup.png" alt="Sorveteria Kizar" class="portfolio-img">
             <a href="./sorveteria-kizar/index.html" class="portfolio-badge-float">↗</a>
@@ -602,7 +603,7 @@
         </div>
 
         <!-- Item: Jovem Aprendiz Brasil -->
-        <div class="portfolio-item reveal" data-category="web">
+        <div class="portfolio-item reveal" data-category="web automacao">
           <div class="portfolio-img-wrap">
             <img src="assets/jab_mockup.png" alt="Jovem Aprendiz Brasil" class="portfolio-img">
             <a href="./jovem-aprendiz-brasil/index.html" class="portfolio-badge-float">↗</a>
@@ -614,7 +615,7 @@
         </div>
 
         <!-- Item: Marvili Corretora de Seguros -->
-        <div class="portfolio-item reveal" data-category="web">
+        <div class="portfolio-item reveal" data-category="web crm">
           <div class="portfolio-img-wrap">
             <img src="assets/marvili_mockup.png" alt="Marvili Corretora de Seguros" class="portfolio-img">
             <a href="./marvili/index.html" class="portfolio-badge-float">↗</a>
@@ -803,7 +804,7 @@
       // Filtrar itens
       const items = document.querySelectorAll('.portfolio-item');
       items.forEach(item => {
-        if (category === 'all' || item.getAttribute('data-category') === category) {
+        if (category === 'all' || (item.getAttribute('data-category') && item.getAttribute('data-category').split(' ').includes(category))) {
           item.style.display = 'flex';
           // Aciona pequena transição suave
           setTimeout(() => {
